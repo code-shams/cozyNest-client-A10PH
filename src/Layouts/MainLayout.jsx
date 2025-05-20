@@ -10,17 +10,17 @@ const MainLayout = () => {
     }, []);
 
     return (
-        <>
-            <header>
+        <div className="bg-sky-50">
+            <header className="">
                 <Navbar></Navbar>
             </header>
-            <main>
+            <main className="min-h-[calc(100vh-325px)]">
                 <Outlet></Outlet>
             </main>
-            <footer>
+            <footer className="">
                 <Footer></Footer>
             </footer>
-        </>
+        </div>
     );
 };
 
