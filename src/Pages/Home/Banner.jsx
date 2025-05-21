@@ -11,7 +11,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Banner = () => {
     return (
-        <div className="bg-white rounded-xl mt-5">
+        <div className="rounded-xl mt-5">
             <Swiper
                 // spaceBetween={30}
                 centeredSlides={true}
@@ -25,14 +25,14 @@ const Banner = () => {
                 className="py-6 shadow-xl rounded-xl"
             >
                 <SwiperSlide>
-                    <div className="h-80 w-full p-5 flex items-center justify-center group bg-teal-50">
+                    <div className="w-full p-2 md:p-5 flex items-center justify-between md:justify-center group bg-teal-50">
                         <img
-                            className="h-80 group-hover:scale-110 translate-y-7 transition-all duration-500"
+                            className="h-60 md:h-80 group-hover:scale-110 translate-y-16 group-hover:translate-y-12 transition-all duration-500"
                             src={girlPic}
                             alt=""
                         />
                         <div className="sec-font text-center group-hover:scale-105 transition-all duration-500">
-                            <h1 className="text-4xl font-extrabold">
+                            <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Welcome
                                 <Typewriter
                                     words={[" to Your Cozy Nest"]}
@@ -43,7 +43,7 @@ const Banner = () => {
                                     delaySpeed={1000}
                                 />
                             </h1>
-                            <p className="text-lg">
+                            <p className="text-sm sm:text-base md:text-lg">
                                 Whether you're finding a room or offering one,
                                 we've got the perfect match for your vibe.
                             </p>
@@ -51,12 +51,12 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="h-80 w-full p-5 flex items-center justify-center group bg-green-50">
+                    <div className="w-full p-2 md:p-5 flex items-center justify-between md:justify-center group bg-green-50">
                         <div className="sec-font text-center group-hover:scale-105 transition-all duration-500">
-                            <h1 className="text-4xl font-extrabold">
-                                Find Mates,
+                            <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
+                                Find
                                 <Typewriter
-                                    words={[" Not Just Roommates"]}
+                                    words={[" the Right Mate"]}
                                     loop={0}
                                     // cursorStyle="_"
                                     typeSpeed={70}
@@ -64,29 +64,29 @@ const Banner = () => {
                                     delaySpeed={1000}
                                 />
                             </h1>
-                            <p className="text-lg">
+                            <p className="text-sm sm:text-base md:text-lg">
                                 Because every nest feels better with the right
                                 people.
                             </p>
                         </div>
                         <img
                             style={{ transform: "scaleX(-1)" }}
-                            className="h-80 :scale-110 translate-y-7 group-hover:scale-110 transition-transform duration-500"
+                            className="h-60 md:h-80 :scale-110 translate-y-16 group-hover:translate-y-12 group-hover:scale-110 transition-transform duration-500"
                             src={boyPic2}
                             alt=""
                         />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="h-80 w-full p-5 flex items-center justify-center group bg-red-50">
+                    <div className="w-full p-2 md:p-5 flex items-center justify-between md:justify-center group bg-red-50">
                         <img
-                            className="h-80 transition-transform duration-500 group-hover:transform group-hover:scale-110 :scale-110 translate-y-7"
+                            className="h-60 md:h-80 transition-transform duration-500 group-hover:transform group-hover:scale-110 :scale-110 translate-y-16 group-hover:translate-y-12"
                             src={girlPic2}
                             alt=""
                         />
 
                         <div className="sec-font text-center group-hover:scale-105 transition-all duration-500">
-                            <h1 className="text-4xl font-extrabold">
+                            <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Find.
                                 <Typewriter
                                     words={[" Match. Settle."]}
@@ -96,7 +96,7 @@ const Banner = () => {
                                     delaySpeed={1000}
                                 />
                             </h1>
-                            <p className="text-lg">
+                            <p className="text-sm sm:text-base md:text-lg">
                                 Your cozy living experience starts in just a few
                                 clicks.
                             </p>
@@ -104,9 +104,9 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="h-80 w-full p-5 flex items-center justify-center group bg-emerald-50">
+                    <div className="w-full p-2 md:p-5 flex items-center justify-between md:justify-center group bg-emerald-50">
                         <div className="sec-font text-center group-hover:scale-105 transition-all duration-500">
-                            <h1 className="text-4xl font-extrabold">
+                            <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Host
                                 <Typewriter
                                     words={[" with Heart"]}
@@ -117,14 +117,14 @@ const Banner = () => {
                                     delaySpeed={1000}
                                 />
                             </h1>
-                            <p className="text-lg">
+                            <p className="text-sm sm:text-base md:text-lg">
                                 Share your space, share your story. CozyNest
                                 makes it easy and meaningful.
                             </p>
                         </div>
                         <img
                             style={{ transform: "scaleX(-1)" }}
-                            className="h-80 :scale-110 translate-y-7 group-hover:scale-110 transition-transform duration-500"
+                            className="h-60 md:h-80 :scale-110 translate-y-16 group-hover:translate-y-12 group-hover:scale-110 transition-transform duration-500"
                             src={boyPic3}
                             alt=""
                         />
