@@ -1,25 +1,16 @@
-import React, { use, useEffect, useState } from "react";
-import navLogo from "../../assets/logo2.png";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
-import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../../Contexts/AuthProvider";
+import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
+import { GiArchiveRegister } from "react-icons/gi";
 
 const Navbar = () => {
     const { user, logoutUser } = use(AuthContext);
-    const [showMenu, setShowMenu] = useState("false");
-    useEffect(() => {
-        console.log(showMenu);
-    }, [showMenu]);
-
     return (
         <nav className="bg-white pri-font flex items-center justify-between max-w-[1515px] w-11/12 mx-auto px-4 py-6 rounded-b-3xl shadow-lg">
             <div className="flex justify-between flex-row-reverse gap-2 items-center w-full lg:w-auto">
                 <div className="dropdown lg:hidden">
-                    <div
-                        tabIndex={0}
-                        role="button"
-                        className=""
-                    >
+                    <div tabIndex={0} role="button" className="">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5 scale-120"
@@ -38,22 +29,87 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                        className="menu menu-sm dropdown-content border bg-lime-50 border-teal-50 rounded-box z-10 mt-2 w-52 p-2 shadow -right-5"
                     >
                         <li>
-                            <a>Homepage</a>
+                            <Link
+                                to="/"
+                                className="text-black font-medium text-base"
+                            >
+                                Home
+                            </Link>
+                            <div className="absolute right-0">
+                                {user ? (
+                                    <img
+                                        className="rounded-full w-9 h-9"
+                                        src={user.photoURL}
+                                        alt=""
+                                    />
+                                ) : (
+                                    ""
+                                )}
+                            </div>
                         </li>
                         <li>
-                            <a>Portfolio</a>
+                            <Link
+                                to="/add-room"
+                                className="text-black font-medium text-base"
+                            >
+                                Add a Room
+                            </Link>
                         </li>
                         <li>
-                            <a>About</a>
+                            <Link
+                                to="/browse-rooms"
+                                className="text-black font-medium text-base"
+                            >
+                                Browse Rooms
+                            </Link>
                         </li>
+                        <li>
+                            <Link
+                                to="/my-rooms"
+                                className="text-black font-medium text-base"
+                            >
+                                My Rooms
+                            </Link>
+                        </li>
+                        {user ? (
+                            <li>
+                                <button
+                                    onClick={() => logoutUser()}
+                                    className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
+                                >
+                                    <FaSignOutAlt></FaSignOutAlt>
+                                    Sign Out
+                                </button>
+                            </li>
+                        ) : (
+                            <div className="grid gap-2">
+                                <li>
+                                    <Link
+                                        to="/auth/sign-in"
+                                        className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
+                                    >
+                                        <FaSignInAlt></FaSignInAlt>
+                                        Sign In
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        to="/auth/sign-up"
+                                        className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
+                                    >
+                                        <GiArchiveRegister></GiArchiveRegister>
+                                        Sign Up
+                                    </Link>
+                                </li>
+                            </div>
+                        )}
                     </ul>
                 </div>
                 {/* Logo & Brand */}
                 <Link to="/" className="flex gap-2 items-center">
-                    {/* <img className="w-10 drop-shadow-md" src={navLogo} alt="" /> */}
                     <div className="text-2xl sm:text-3xl font-extrabold">
                         <span className="text">Cozy</span>
                         <span className="text-rose-500">N</span>
@@ -110,36 +166,27 @@ const Navbar = () => {
             <div className="text-lg space-x-4">
                 {user ? (
                     <div className="group relative">
-                        <button onClick={() => setShowMenu(!showMenu)}>
-                            <img
-                                className="rounded-full cursor-pointer w-16"
-                                src={user.photoURL}
-                                alt=""
-                            />
-                        </button>
-                        <div className="z-10 bg-lime-50 absolute w-60 -right-4 top-20 p-5 rounded-xl border border-teal-50 shadow scale-0 opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 origin-top-right">
-                            <p className="text-right font-bold pri-font">
+                        <img
+                            className="rounded-full cursor-pointer w-16 hidden lg:block"
+                            src={user.photoURL}
+                            alt=""
+                        />
+                        <div className="z-10 bg-lime-50 absolute w-64 -right-4 top-20 p-5 rounded-xl border border-teal-50 shadow space-y-3 opacity-0 -translate-y-96 group-hover:translate-0 group-hover:opacity-100 transition-all duration-500">
+                            <p className="font-extrabold pri-font text-xl w-full text-right">
                                 {user.displayName}
                             </p>
-                            <div className="text-right">
+                            <div className="flex justify-end">
                                 <button
-                                    onClick={logoutUser}
-                                    className="btn btn-accent"
+                                    onClick={() => logoutUser()}
+                                    className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
                                 >
-                                    <span className="pri-font font-extrabold">
-                                        Sign Out
-                                    </span>
+                                    <FaSignOutAlt></FaSignOutAlt>
+                                    Sign Out
                                 </button>
                             </div>
                         </div>
-                        {showMenu ? (
-                            <div className="z-10 bg-lime-50 absolute w-60 h-20 -right-4 top-20 p-5 rounded-xl border border-teal-50 shadow md:hidden"></div>
-                        ) : (
-                            ""
-                        )}
                     </div>
                 ) : (
-                  
                     <div className="md:mr-1 space-x-5">
                         <NavLink
                             to="/auth/sign-in"
