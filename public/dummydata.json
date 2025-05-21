@@ -1,0 +1,87 @@
+[
+    {
+        "title": "Looking for a roommate in NYC",
+        "location": "New York, NY",
+        "rentAmount": 1200,
+        "roomType": "Shared",
+        "lifestylePreferences": ["Non-smoker", "No pets", "Early riser"],
+        "description": "Spacious 2-bedroom apartment in Manhattan. Close to subway and Central Park.",
+        "photo": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
+        "contactInfo": "john.doe@example.com",
+        "availability": "Available",
+        "userEmail": "john.doe@example.com",
+        "userName": "John Doe",
+        "_id":1
+    },
+    {
+        "title": "Room available in downtown LA",
+        "location": "Los Angeles, CA",
+        "rentAmount": 900,
+        "roomType": "Single",
+        "lifestylePreferences": ["Pet-friendly", "Night owl", "Vegetarian"],
+        "description": "Cozy room in a 3-bedroom apartment. Walking distance to shops and restaurants.",
+        "photo": "https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg",
+        "contactInfo": "jane.smith@example.com",
+        "availability": "Available",
+        "userEmail": "jane.smith@example.com",
+        "userName": "Jane Smith",
+        "_id":2
+    },
+    {
+        "title": "Seeking roommate for SF apartment",
+        "location": "San Francisco, CA",
+        "rentAmount": 1500,
+        "roomType": "Shared",
+        "lifestylePreferences": ["Non-smoker", "No pets", "Quiet"],
+        "description": "Modern apartment with a great view. Close to public transportation.",
+        "photo": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+        "contactInfo": "alice.wong@example.com",
+        "availability": "Available",
+        "userEmail": "alice.wong@example.com",
+        "userName": "Alice Wong",
+
+        "_id":3
+    },
+    {
+        "title": "Room for rent in Chicago",
+        "location": "Chicago, IL",
+        "rentAmount": 800,
+        "roomType": "Single",
+        "lifestylePreferences": ["Smoker", "Pet-friendly", "Early riser"],
+        "description": "Furnished room in a friendly neighborhood. Utilities included.",
+        "photo": "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg",
+        "contactInfo": "michael.brown@example.com",
+        "availability": "Available",
+        "userEmail": "michael.brown@example.com",
+        "userName": "Michael Brown",
+        "_id":4
+    },
+    {
+        "title": "Looking for roommate in Austin",
+        "location": "Austin, TX",
+        "rentAmount": 700,
+        "roomType": "Shared",
+        "lifestylePreferences": ["Non-smoker", "No pets", "Night owl"],
+        "description": "Affordable room in a 2-bedroom apartment. Close to university campus.",
+        "photo": "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg",
+        "contactInfo": "emily.johnson@example.com",
+        "availability": "Available",
+        "userEmail": "emily.johnson@example.com",
+        "userName": "Emily Johnson",
+        "_id":5
+    },
+    {
+        "title": "Spacious room in Seattle",
+        "location": "Seattle, WA",
+        "rentAmount": 1100,
+        "roomType": "Single",
+        "lifestylePreferences": ["Pet-friendly", "Non-smoker", "Quiet"],
+        "description": "Large room with natural light. Shared kitchen and living area.",
+        "photo": "https://images.pexels.com/photos/1743227/pexels-photo-1743227.jpeg",
+        "contactInfo": "david.lee@example.com",
+        "availability": "Available",
+        "userEmail": "david.lee@example.com",
+        "userName": "David Lee",
+        "_id":6
+    }
+]

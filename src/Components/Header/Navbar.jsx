@@ -55,7 +55,7 @@ const Navbar = () => {
                                 to="/add-room"
                                 className="text-black font-medium text-base"
                             >
-                                Add a Room
+                                Add a Post
                             </Link>
                         </li>
                         <li>
@@ -63,7 +63,7 @@ const Navbar = () => {
                                 to="/browse-rooms"
                                 className="text-black font-medium text-base"
                             >
-                                Browse Rooms
+                                Browse Posts
                             </Link>
                         </li>
                         <li>
@@ -71,7 +71,7 @@ const Navbar = () => {
                                 to="/my-rooms"
                                 className="text-black font-medium text-base"
                             >
-                                My Rooms
+                                My Posts
                             </Link>
                         </li>
                         {user ? (
@@ -138,7 +138,7 @@ const Navbar = () => {
                             : "hover:opacity-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
                     }
                 >
-                    Add a Room
+                    Add a Post
                 </NavLink>
                 <NavLink
                     to="/browse-rooms"
@@ -148,7 +148,7 @@ const Navbar = () => {
                             : "hover:opacity-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
                     }
                 >
-                    Browse Rooms
+                    Browse Posts
                 </NavLink>
                 <NavLink
                     to="/my-rooms"
@@ -158,7 +158,7 @@ const Navbar = () => {
                             : "hover:opacity-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
                     }
                 >
-                    My Rooms
+                    My Posts
                 </NavLink>
             </div>
 

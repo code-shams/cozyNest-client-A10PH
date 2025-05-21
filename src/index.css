@@ -12,6 +12,17 @@
     name: "light";
     default: true;
     --color-primary: blue;
+    --color-base-100: #f0f9ff;
+}
+
+@plugin "daisyui/theme" {
+    name: "dark";
+    --color-primary: black;
+    --color-secondary: black;
+    --color-accent: black;
+    --color-base-100: black;
+    --color-base-200: black;
+    --color-base-300: black;
 }
 
 .pri-font {

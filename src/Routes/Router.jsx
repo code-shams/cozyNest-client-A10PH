@@ -8,6 +8,7 @@ import BrowseRoom from "../Pages/BrowseRoom/BrowseRoom";
 import MyRooms from "../Pages/MyRooms/MyRooms";
 import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
+import Details from "../Pages/DetailsPage/Details";
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                loader: () => fetch("/dummydata.json"),
                 Component: Homepage,
             },
             {
@@ -29,17 +31,22 @@ export const router = createBrowserRouter([
             },
             {
                 path: "browse-rooms",
-                element: (
-                    <PrivateRoute>
-                        <BrowseRoom></BrowseRoom>
-                    </PrivateRoute>
-                ),
+                element: <BrowseRoom></BrowseRoom>,
             },
             {
                 path: "my-rooms",
                 element: (
                     <PrivateRoute>
                         <MyRooms></MyRooms>
+                    </PrivateRoute>
+                ),
+            },
+            {
+                path: "post-details/:id",
+                loader: ({ params }) => fetch("/dummmydata.json"),
+                element: (
+                    <PrivateRoute>
+                        <Details></Details>
                     </PrivateRoute>
                 ),
             },
