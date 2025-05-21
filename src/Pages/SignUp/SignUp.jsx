@@ -59,12 +59,14 @@ const SignUp = () => {
             });
     };
     return (
-        <div className="py-5 w-11/12 max-w-[1550px] mx-auto">
+        <div className="my-5 w-11/12 max-w-[1550px] mx-auto rounded-lg shadow-lg bg-white">
             <title>SignUp</title>
-            <div className=" border-2 border-teal-100 py-3 px-4 sm:p-5 rounded-lg shadow-lg pri-font bg-white flex gap-20">
-                <div className="w-1/2 space-y-3">
-                    <h1 className="text-2xl font-bold text-center">Sign Up</h1>
-                    <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="border-2 border-teal-100 p-2 md:py-3 md:px-4 sm:p-5 pri-font flex flex-col-reverse md:flex-row gap-5 md:gap-20">
+                <div className="md:w-1/2 space-y-3">
+                    <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold">
+                        Sign Up
+                    </h1>
+                    <form onSubmit={handleSubmit} className="space-y-3 md:space-y-6">
                         <div className="space-y-1 text-sm">
                             <label htmlFor="name" className="block">
                                 Name
@@ -184,16 +186,17 @@ const SignUp = () => {
                         </Link>
                     </p>
                 </div>
-                <div className="w-1/2">
-                    <h1 className="text-center text-3xl font-extrabold pri-font w-3/4 p-1 mx-auto">
+                <div className="w-full md:w-1/2">
+                    <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-extrabold pri-font p-1 mx-auto">
                         Welcome to CozyNest
                     </h1>
-
-                    {/* <img className="w-[900px] h-80" src={bg} alt="" /> */}
-                    <Lottie animationData={ani1} loop={true} />
+                    <Lottie
+                        className="w-3/4 md:full mx-auto"
+                        animationData={ani1}
+                        loop={true}
+                    />
                 </div>
             </div>
-            {/* <div className="w-3/5 shadow-xl p-5 rounded-lg border-2 border-teal-100 bg-white"></div> */}
         </div>
     );
 };
