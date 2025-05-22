@@ -1,7 +1,7 @@
 import React, { use, useEffect, useState } from "react";
 import { themeChange } from "theme-change";
 import Navbar from "../Components/Header/Navbar";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
 import Footer from "../Components/Footer/Footer";
 import { AuthContext } from "../Contexts/AuthProvider";
 import Loader from "../Components/Loader/Loader";
@@ -21,10 +21,8 @@ const MainLayout = () => {
             }
         }, 2500);
 
-        if (!loading) {
-            // If loading finishes early, wait for timeout to complete
-            return () => clearTimeout(timer);
-        }
+        // If loading finishes early, wait for timeout to complete
+        return () => clearTimeout(timer);
     }, [loading]);
 
     return (

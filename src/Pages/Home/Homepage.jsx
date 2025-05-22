@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import { useLoaderData } from "react-router";
-import FeaturedPost from "./FeaturedPost";
+import FeaturedPost from "./FeaturedPost/FeaturedPost";
 
 const Homepage = () => {
     const posts = useLoaderData();

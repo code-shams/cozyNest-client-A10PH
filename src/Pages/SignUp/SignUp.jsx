@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/AuthProvider";
-import bg from "../../assets/OpenPeeps/signUp.png";
 import Lottie from "lottie-react";
 import ani1 from "../../assets/signUp.json";
 
@@ -66,7 +65,10 @@ const SignUp = () => {
                     <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold">
                         Sign Up
                     </h1>
-                    <form onSubmit={handleSubmit} className="space-y-3 md:space-y-6">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="space-y-3 md:space-y-6"
+                    >
                         <div className="space-y-1 text-sm">
                             <label htmlFor="name" className="block">
                                 Name
