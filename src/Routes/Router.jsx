@@ -45,6 +45,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: "browse-rooms",
+                hydrateFallbackElement: <Loader></Loader>,
+                loader: () => fetch("https://cozy-nest-server.vercel.app/post"),
                 element: <BrowseRoom></BrowseRoom>,
             },
             {

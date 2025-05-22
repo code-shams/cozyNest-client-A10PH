@@ -27,24 +27,24 @@ const AddRoom = () => {
                 }
             }
         }
-        // fetch("https://cozy-nest-server.vercel.app/post", {
-        //     method: "POST",
-        //     headers: {
-        //         "content-type": "application/json",
-        //     },
-        //     body: JSON.stringify(formObj),
-        // })
-        //     .then((res) => res.json())
-        //     .then((data) => {
-        //         if (data.data.insertedId) {
-        //             console.log(data?.data?.insertedId);
-        //             Swal.fire({
-        //                 text: "Successful",
-        //                 icon: "success",
-        //                 timer: 1500,
-        //             });
-        //         }
-        //     });
+        fetch("https://cozy-nest-server.vercel.app/post", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(formObj),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.data.insertedId) {
+                    console.log(data?.data?.insertedId);
+                    Swal.fire({
+                        text: "Successfully Added a Post",
+                        icon: "success",
+                        timer: 1500,
+                    });
+                }
+            });
     };
     return (
         <div className="max-w-[1515px] w-11/12 mx-auto my-10 sec-font">
