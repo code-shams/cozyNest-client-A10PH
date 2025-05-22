@@ -9,6 +9,8 @@ import MyRooms from "../Pages/MyRooms/MyRooms";
 import SignIn from "../Pages/SignIn/SignIn";
 import SignUp from "../Pages/SignUp/SignUp";
 import Details from "../Pages/DetailsPage/Details";
+import UpdateRoom from "../Pages/UpdateRoom/UpdateRoom";
+import Loader from "../Components/Loader/Loader";
 
 export const router = createBrowserRouter([
     {
@@ -18,7 +20,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch("/dummydata.json"),
+                hydrateFallbackElement: <Loader></Loader>,
+                loader: () =>
+                    fetch(
+                        "https://cozy-nest-server.vercel.app/post?availability=Available"
+                    ),
                 Component: Homepage,
             },
             {
@@ -26,6 +32,14 @@ export const router = createBrowserRouter([
                 element: (
                     <PrivateRoute>
                         <AddRoom></AddRoom>
+                    </PrivateRoute>
+                ),
+            },
+            {
+                path: "update-room",
+                element: (
+                    <PrivateRoute>
+                        <UpdateRoom></UpdateRoom>
                     </PrivateRoute>
                 ),
             },
@@ -43,7 +57,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "post-details/:id",
-                loader: ({ params }) => fetch("/dummmydata.json"),
+                hydrateFallbackElement: <Loader></Loader>,
+                loader: ({ params }) =>
+                    fetch(
+                        `https://cozy-nest-server.vercel.app/post?_id=${params.id}`
+                    ),
                 element: (
                     <PrivateRoute>
                         <Details></Details>

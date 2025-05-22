@@ -7,14 +7,14 @@ import { useLoaderData } from "react-router";
 import FeaturedPost from "./FeaturedPost/FeaturedPost";
 
 const Homepage = () => {
-    const posts = useLoaderData();
+    const { data } = useLoaderData();
     return (
         <div className="max-w-[1515px] w-11/12 mx-auto">
             <section>
                 <Banner></Banner>
             </section>
             <section>
-                <FeaturedPost posts={posts}></FeaturedPost>
+                <FeaturedPost posts={data}></FeaturedPost>
             </section>
         </div>
     );

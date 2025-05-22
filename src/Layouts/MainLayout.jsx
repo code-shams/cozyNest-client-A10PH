@@ -12,22 +12,21 @@ const MainLayout = () => {
     // }, []);
     const { loading } = use(AuthContext);
     const [showLoader, setShowLoader] = useState(true);
+    const navigation = useNavigation();
 
     useEffect(() => {
-        // Always show loader for at least 5 seconds
         const timer = setTimeout(() => {
             if (!loading) {
                 setShowLoader(false);
             }
         }, 2500);
 
-        // If loading finishes early, wait for timeout to complete
         return () => clearTimeout(timer);
     }, [loading]);
 
     return (
         <div className="bg-base-100">
-            {loading || showLoader ? (
+            {loading || showLoader || navigation.state === "loading"? (
                 <Loader></Loader>
             ) : (
                 <>

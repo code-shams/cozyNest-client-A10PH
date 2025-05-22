@@ -47,14 +47,14 @@
         "location": "Chicago, IL",
         "rentAmount": 800,
         "roomType": "Single",
-        "preferences": ["Smoker", "Pet-friendly", "Early riser"],
+        "preferences": "Smoker, Pet-friendly, Early riser",
         "description": "Furnished room in a friendly neighborhood. Utilities included.",
         "photo": "https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg",
         "contactInfo": "michael.brown@example.com",
         "availability": "Available",
         "userEmail": "michael.brown@example.com",
         "userName": "Michael Brown",
-        "_id":4
+        "likeCount": 0
     },
     {
         "title": "Looking for roommate in Austin",

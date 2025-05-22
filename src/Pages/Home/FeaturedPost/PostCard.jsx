@@ -5,7 +5,7 @@ import { Link } from "react-router";
 import pic from "../../../assets/OpenPeeps/groupPic.png";
 import pic2 from "../../../assets/OpenPeeps/groupPic2.png";
 const PostCard = ({ post, index }) => {
-    let { title, photo, rentAmount, location, userName, _id } = post;
+    let { title, photo, rentAmount, location, name, _id } = post;
     if (!photo) {
         if (index % 2) {
             photo = pic;
@@ -16,7 +16,7 @@ const PostCard = ({ post, index }) => {
 
     return (
         <div className="card shadow-lg bg-white border border-teal-50 sec-font hover:bg-slate-100 transition-all duration-200 overflow-hidden">
-            <span className="bg-rose-200 badge rounded-t-sm rounded-none font-bold absolute right-0 border-none text-black">
+            <span className="bg-rose-200 badge rounded-sm font-bold absolute right-0 border-none text-stone-600">
                 {rentAmount}$
             </span>
             <figure className="">
@@ -33,7 +33,7 @@ const PostCard = ({ post, index }) => {
                 </h2>
                 <span className="flex items-center gap-1">
                     <FaUserCircle></FaUserCircle>
-                    {userName}
+                    {name}
                 </span>
                 <div className="flex justify-between">
                     <span className="flex items-center gap-1">
