@@ -26,7 +26,12 @@ const FeaturedPost = ({ posts }) => {
                                 <th className="hidden md:table-cell">
                                     Availability
                                 </th>
-                                <th>Details</th>
+                                <th className="hidden lg:table-cell">
+                                    Preferences
+                                </th>
+                                <th className="hidden md:table-cell">
+                                    Details
+                                </th>
                             </tr>
                         </thead>
                         <tbody>

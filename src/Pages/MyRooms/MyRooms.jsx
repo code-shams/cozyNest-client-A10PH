@@ -37,7 +37,6 @@ const MyRooms = () => {
                     .then((res) => res.json())
                     .then((data) => {
                         if (data?.data?.deletedCount) {
-                            console.log(data);
                             const currentPosts = userPosts.filter(
                                 (post) => post._id !== id
                             );
@@ -68,15 +67,19 @@ const MyRooms = () => {
                                 <thead>
                                     <tr>
                                         <th>Room</th>
-                                        <th>Title</th>
+                                        <th className="hidden md:table-cell">Title</th>
+                                        <th className="hidden md:table-cell">
+                                            Preferences
+                                        </th>
                                         <th className="hidden md:table-cell">
                                             Availability
                                         </th>
                                         <th className="hidden md:table-cell">
                                             Rent
                                         </th>
-                                        <th>Edit</th>
-                                        <th>Delete</th>
+                                        <th className="hidden md:table-cell">Edit</th>
+                                        <th className="hidden md:table-cell">Delete</th>
+                                        <th className="md:hidden">Edit / Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>

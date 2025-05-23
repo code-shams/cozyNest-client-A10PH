@@ -1,7 +1,6 @@
-import React, { use, useEffect, useState } from "react";
-import { AuthContext } from "../../Contexts/AuthProvider";
+import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import { Navigate, useLoaderData, useNavigate } from "react-router";
+import { useLoaderData, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import Loader from "../../Components/Loader/Loader";
 
@@ -41,12 +40,12 @@ const UpdateRoom = () => {
             .then((data) => {
                 setLoading(false);
                 if (data.data.modifiedCount) {
+                    navigate("/my-rooms");
                     Swal.fire({
                         text: "Post Updated",
                         icon: "success",
                         timer: 1500,
                     });
-                    navigate("/my-rooms");
                 } else {
                     Swal.fire({
                         text: "Post Update failed",

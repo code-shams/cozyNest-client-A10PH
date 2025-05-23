@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { FaPhoneAlt, FaThumbsDown, FaThumbsUp, FaUser } from "react-icons/fa";
 import { useLoaderData } from "react-router";
+import { AuthContext } from "../../Contexts/AuthProvider";
 
 const Details = () => {
+    const { user } = use(AuthContext);
     const { data } = useLoaderData();
     const {
         title,
+        _id,
         email,
         name,
         photo,
@@ -16,17 +19,25 @@ const Details = () => {
         availability,
         contactInfo,
         details,
+        likeCount,
     } = data[0];
-    const [likes, setLikes] = useState(0);
-    const [dislike, setDislike] = useState(false);
+    const [likes, setLikes] = useState(likeCount);
+    const [likeStatus, setLikeStatus] = useState(false);
+
     const handleLike = () => {
-        if (dislike) {
-            setLikes(likes - 1);
-            setDislike(!dislike);
-            return;
-        }
+        fetch(`https://cozy-nest-server.vercel.app/post/${_id}`, {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify({ likeCount: likes + 1 }),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+            });
         setLikes(likes + 1);
-        setDislike(!dislike);
+        setLikeStatus(true);
     };
     return (
         <div className="max-w-[1515px] w-11/12 mx-auto mt-5 md:mt-10">
@@ -55,23 +66,21 @@ const Details = () => {
                             <span className="opacity-80 text-xs md:text-base text-rose-700 rounded-xl font-bold pri-font">
                                 {likes} people interested in
                             </span>
-                            <button
-                                onClick={handleLike}
-                                className="sec-font cursor-pointer py-1 px-3 md:px-5 border-y-5 border-t-black border-t-blue-300 rounded-xl font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
-                            >
-                                {dislike ? (
-                                    <span className="flex items-center text-xs md:text-base gap-1">
-                                        <FaThumbsDown className="text-rose-600"></FaThumbsDown>
-                                        Dislike
-                                    </span>
-                                ) : (
+                            {user.displayName === name &&
+                            user.email === email ? (
+                                ""
+                            ) : (
+                                <button
+                                    onClick={handleLike}
+                                    className="sec-font cursor-pointer py-1 px-3 md:px-5 border-y-5 border-t-black border-t-blue-300 rounded-xl font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
+                                >
                                     <span className="flex items-center gap-1 text-xs md:text-base">
                                         <FaThumbsUp className="text-rose-600 size-3 md:size-5"></FaThumbsUp>
                                         Like
                                     </span>
-                                )}
-                            </button>
-                            {dislike ? (
+                                </button>
+                            )}
+                            {likeStatus ? (
                                 <span className="text-xs md:text-base font-bold pri-font flex items-center gap-1 my-2">
                                     <FaPhoneAlt></FaPhoneAlt>
                                     Contact: {contactInfo}

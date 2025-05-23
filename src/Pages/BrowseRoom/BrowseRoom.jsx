@@ -23,11 +23,11 @@ const BrowseRoom = () => {
                                 <th className="hidden md:table-cell">
                                     Location
                                 </th>
-                                <th className="hidden md:table-cell">
+                                <th className="hidden lg:table-cell">
                                     Availability
                                 </th>
-                                <th className="hidden md:table-cell">Rent</th>
-                                <th>Details</th>
+                                <th className="hidden lg:table-cell">Rent</th>
+                                <th className="hidden md:table-cell">Details</th>
                             </tr>
                         </thead>
                         <tbody>
