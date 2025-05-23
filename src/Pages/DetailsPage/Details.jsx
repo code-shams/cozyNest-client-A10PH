@@ -2,6 +2,7 @@ import React, { use, useEffect, useState } from "react";
 import { FaPhoneAlt, FaThumbsDown, FaThumbsUp, FaUser } from "react-icons/fa";
 import { useLoaderData } from "react-router";
 import { AuthContext } from "../../Contexts/AuthProvider";
+import Swal from "sweetalert2";
 
 const Details = () => {
     const { user } = use(AuthContext);
@@ -34,10 +35,17 @@ const Details = () => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                if (data.data.matchedCount) {
+                    setLikes(likes + 1);
+                    setLikeStatus(true);
+                } else {
+                    Swal.fire({
+                        text: "Something went wrong!!!",
+                        icon: "error",
+                        timer: 1500,
+                    });
+                }
             });
-        setLikes(likes + 1);
-        setLikeStatus(true);
     };
     return (
         <div className="max-w-[1515px] w-11/12 mx-auto mt-5 md:mt-10">
@@ -72,7 +80,7 @@ const Details = () => {
                             ) : (
                                 <button
                                     onClick={handleLike}
-                                    className="sec-font cursor-pointer py-1 px-3 md:px-5 border-y-5 border-t-black border-t-blue-300 rounded-xl font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
+                                    className="sec-font cursor-pointer py-1 px-3 md:px-5 border-y-5  border-t-blue-300 rounded-xl font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
                                 >
                                     <span className="flex items-center gap-1 text-xs md:text-base">
                                         <FaThumbsUp className="text-rose-600 size-3 md:size-5"></FaThumbsUp>

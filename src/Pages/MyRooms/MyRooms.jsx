@@ -43,7 +43,7 @@ const MyRooms = () => {
                             setUserPosts(currentPosts);
                             Swal.fire({
                                 title: "Deleted!",
-                                text: "Your file has been deleted.",
+                                text: "Post has been deleted.",
                                 icon: "success",
                             });
                         }
@@ -67,7 +67,9 @@ const MyRooms = () => {
                                 <thead>
                                     <tr>
                                         <th>Room</th>
-                                        <th className="hidden md:table-cell">Title</th>
+                                        <th className="hidden md:table-cell">
+                                            Title
+                                        </th>
                                         <th className="hidden md:table-cell">
                                             Preferences
                                         </th>
@@ -77,9 +79,15 @@ const MyRooms = () => {
                                         <th className="hidden md:table-cell">
                                             Rent
                                         </th>
-                                        <th className="hidden md:table-cell">Edit</th>
-                                        <th className="hidden md:table-cell">Delete</th>
-                                        <th className="md:hidden">Edit / Delete</th>
+                                        <th className="hidden md:table-cell">
+                                            Edit
+                                        </th>
+                                        <th className="hidden md:table-cell">
+                                            Delete
+                                        </th>
+                                        <th className="md:hidden">
+                                            Edit / Delete
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
