@@ -18,7 +18,7 @@ const AddRoom = () => {
         formObj.email = user.email;
         formObj.likeCount = 0;
         for (const key in formObj) {
-            if (key !== "photo" && key === "likeCount") {
+            if (key !== "photo" && key !== "likeCount") {
                 if (!formObj[key]) {
                     toast.error(`${key} is empty! Please fill that out.`);
                     setLoading(false);
