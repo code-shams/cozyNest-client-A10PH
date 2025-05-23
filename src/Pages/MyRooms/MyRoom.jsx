@@ -20,7 +20,7 @@ const MyRoom = ({ post, index, handleDelete }) => {
         photo = post.photo;
     }
     return (
-        <tr className="pri-font font-bold">
+        <tr className="pri-font font-bold hover:shadow-lg scale-97 transition-all duration-300 hover:scale-100">
             <td className="space-y-2">
                 <img className="rounded-sm w-70" src={photo} alt={title} />
                 <span className="flex flex-col md:hidden">

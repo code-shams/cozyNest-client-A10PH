@@ -6,6 +6,7 @@ import { GiArchiveRegister } from "react-icons/gi";
 
 const Navbar = () => {
     const { user, logoutUser } = use(AuthContext);
+    console.log(user.email);
     return (
         <nav className="bg-white pri-font flex items-center justify-between max-w-[1515px] w-11/12 mx-auto px-4 py-6 rounded-b-3xl shadow-lg">
             <div className="flex justify-between flex-row-reverse gap-2 items-center w-full lg:w-auto">

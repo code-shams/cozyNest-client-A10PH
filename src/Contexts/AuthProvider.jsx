@@ -16,8 +16,6 @@ const AuthProvider = ({ children }) => {
     //? user state to be used across the project
     const [user, setUser] = useState(null);
 
-    // const [refMail, setRefMail] = useState("");
-
     //? create a loading state to handle user = null;
     const [loading, setLoading] = useState(true);
 

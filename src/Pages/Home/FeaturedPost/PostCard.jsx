@@ -26,7 +26,7 @@ const PostCard = ({ post, index }) => {
     }
 
     return (
-        <tr className="pri-font font-bold">
+        <tr className="pri-font font-bold hover:shadow-lg scale-97 transition-all duration-300 hover:scale-100">
             <td className="hidden md:table-cell">
                 <img className="rounded-sm w-70" src={photo} alt={title} />
             </td>

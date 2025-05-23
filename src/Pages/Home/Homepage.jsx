@@ -5,6 +5,8 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import { useLoaderData } from "react-router";
 import FeaturedPost from "./FeaturedPost/FeaturedPost";
+import FAQ from "./FAQ";
+import HowItWorks from "./HowItWorks";
 
 const Homepage = () => {
     const { data } = useLoaderData();
@@ -15,6 +17,12 @@ const Homepage = () => {
             </section>
             <section>
                 <FeaturedPost posts={data}></FeaturedPost>
+            </section>
+            <section>
+                <FAQ></FAQ>
+            </section>
+            <section>
+                <HowItWorks></HowItWorks>
             </section>
         </div>
     );

@@ -13,18 +13,26 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                 {/* Contact Details */}
                 <div>
-                    <h4 className="text-xl font-bold mb-2">CozyNest</h4>
-                    <p>Email: support@cozynest.com</p>
-                    <p>Phone: +1 (234) 567-8901</p>
+                    <h4 className="text-base md:text-base lg:text-lg font-bold mb-2">
+                        CozyNest
+                    </h4>
+                    <p className="text-sm md:text-base lg:text-lg">
+                        Email: support@cozynest.com
+                    </p>
+                    <p className="text-sm md:text-base lg:text-lg">
+                        Phone: +992567-8901
+                    </p>
                 </div>
 
                 {/* Terms & Privacy */}
                 <div className="flex flex-col gap-2">
                     <Link to="/terms" className="hover:underline">
-                        Terms & Conditions
+                        <span className="text-sm md:text-base lg:text-lg">Terms & Conditions</span>
                     </Link>
                     <Link to="/privacy" className="hover:underline">
-                        Privacy Policy
+                        <span className="text-sm md:text-base lg:text-lg">
+                            Privacy Policy
+                        </span>
                     </Link>
                 </div>
 
@@ -33,7 +41,6 @@ const Footer = () => {
                     <a
                         href="https://facebook.com"
                         target="_blank"
-                        rel="noreferrer"
                         className="text-black hover:text-[#FFA69E] transition"
                     >
                         <FaFacebookF size={18} />
@@ -41,7 +48,6 @@ const Footer = () => {
                     <a
                         href="https://instagram.com"
                         target="_blank"
-                        rel="noreferrer"
                         className="text-black hover:text-[#FFA69E] transition"
                     >
                         <FaInstagram size={18} />
@@ -49,7 +55,6 @@ const Footer = () => {
                     <a
                         href="https://twitter.com"
                         target="_blank"
-                        rel="noreferrer"
                         className="text-black hover:text-[#FFA69E] transition"
                     >
                         <FaTwitter size={18} />
@@ -57,7 +62,6 @@ const Footer = () => {
                     <a
                         href="https://linkedin.com"
                         target="_blank"
-                        rel="noreferrer"
                         className="text-black hover:text-[#FFA69E] transition"
                     >
                         <FaLinkedinIn size={18} />
