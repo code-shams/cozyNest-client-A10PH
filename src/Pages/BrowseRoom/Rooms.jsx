@@ -17,7 +17,11 @@ const Rooms = ({ roomData }) => {
                 <img className="rounded-sm w-40" src={photo} alt={title} />
             </td>
             <td>
-                <img className="md:hidden rounded-sm w-40" src={photo} alt={title} />
+                <img
+                    className="md:hidden rounded-sm w-40"
+                    src={photo}
+                    alt={title}
+                />
                 <span className="text-xs sm:text-base">{name}</span>
             </td>
             <td>
@@ -26,10 +30,10 @@ const Rooms = ({ roomData }) => {
             <td className="hidden md:table-cell">{location}</td>
             <td className="hidden md:table-cell">{availability}</td>
             <td className="hidden md:table-cell">{rentAmount}$</td>
-            <td>
+            <td className="text-xs">
                 <Link
                     to={`/post-details/${_id}`}
-                    className="flex items-center text-xs md:text-base"
+                    className="flex items-center py-2 gap-2 px-3 rounded-2xl border-2 w-max border-black hover:border-green-100 hover:bg-green-500 hover:text-white hover:shadow-xl hover:shadow-green-100 cursor-pointer hover:scale-110 hover:font-extrabold transition-all duration-300 text-xs"
                 >
                     See more
                     <FaChevronRight></FaChevronRight>

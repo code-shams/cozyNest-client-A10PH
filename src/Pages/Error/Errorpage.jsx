@@ -6,7 +6,7 @@ import { FaHome } from "react-icons/fa";
 
 const Errorpage = () => {
     return (
-        <div className="min-h-screen bg-sky-50 space-y-3">
+        <div className="min-h-screen bg-sky-50 space-y-3 flex flex-col items-center">
             <Lottie className="h-80" animationData={animation} loop={true} />
             <h1 className="text-5xl font-bold pri-font text-center">
                 Oh No!

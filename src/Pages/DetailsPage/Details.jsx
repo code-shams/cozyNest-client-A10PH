@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-    FaPhone,
-    FaPhoneAlt,
-    FaThumbsDown,
-    FaThumbsUp,
-    FaUser,
-} from "react-icons/fa";
-import { FaLocationDot, FaLocationPin } from "react-icons/fa6";
+import { FaPhoneAlt, FaThumbsDown, FaThumbsUp, FaUser } from "react-icons/fa";
 import { useLoaderData } from "react-router";
 
 const Details = () => {
@@ -38,7 +31,7 @@ const Details = () => {
     return (
         <div className="max-w-[1515px] w-11/12 mx-auto mt-5 md:mt-10">
             <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0  shadow-xl group">
-                <h1 className="text-center text-sm p-1 sm:p-0 sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-lime-200 rounded-b-full w-full lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 opacity-80 group-hover:opacity-100 overflow-hidden">
+                <h1 className="text-center text-sm p-1 sm:p-0 sm:text-xl md:text-2xl font-extrabold pri-font bg-black text-lime-200 rounded-b-full w-full lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 opacity-80 group-hover:opacity-100 overflow-hidden">
                     {title}
                 </h1>
                 <div className="mt-3 md:mt-6">
@@ -50,7 +43,7 @@ const Details = () => {
                     {/* headings */}
                     <section className="md:w-10/12 lg:w-4/5 mx-auto mt-3 relative grid sm:grid-cols-2 gap-2 sm:0">
                         <div className="space-y-1">
-                            <h1 className="pri-font font-bold text-sm md:text-xl lg:text-3xl flex gap-1 items-center">
+                            <h1 className="pri-font font-bold text-sm md:text-xl lg:text-2xl flex gap-1 items-center">
                                 <FaUser className="text-rose-400 size-4 md:size-6"></FaUser>
                                 {name}
                             </h1>
@@ -79,7 +72,7 @@ const Details = () => {
                                 )}
                             </button>
                             {dislike ? (
-                                <span className="text-xs md:text-base font-bold pri-font flex items-center gap-1">
+                                <span className="text-xs md:text-base font-bold pri-font flex items-center gap-1 my-2">
                                     <FaPhoneAlt></FaPhoneAlt>
                                     Contact: {contactInfo}
                                 </span>
@@ -146,7 +139,9 @@ const Details = () => {
                     <h1 className="text-center text-sm text-base md:text-2xl pri-font font-extrabold mt-6 md:w-1/2 mx-auto border-b-2 text-rose-400 border-dashed">
                         Details
                     </h1>
-                    <p className="text-center text-sm md:text-base mt-2 sec-font">{details}</p>
+                    <p className="text-center text-sm md:text-base mt-2 sec-font">
+                        {details}
+                    </p>
                 </div>
             </div>
         </div>

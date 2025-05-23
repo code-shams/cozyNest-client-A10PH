@@ -12,14 +12,33 @@ const FeaturedPost = ({ posts }) => {
                 <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-lime-200 rounded-b-full md:w-1/2 lg:w-1/3 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 opacity-80 hover:opacity-100 overflow-hidden">
                     Featured Posts
                 </h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 relative">
-                    {posts.map((post, index) => (
-                        <PostCard
-                            key={index}
-                            post={post}
-                            index={index}
-                        ></PostCard>
-                    ))}
+                <div className="overflow-x-auto mt-5 md:mt-10">
+                    <table className="table">
+                        {/* head */}
+                        <thead>
+                            <tr>
+                                <th className="hidden md:table-cell">Room</th>
+                                <th>Posted by</th>
+                                <th>Title</th>
+                                <th className="hidden md:table-cell">
+                                    Location
+                                </th>
+                                <th className="hidden md:table-cell">
+                                    Availability
+                                </th>
+                                <th>Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {posts.map((post, index) => (
+                                <PostCard
+                                    key={post._id}
+                                    post={post}
+                                    index={index}
+                                ></PostCard>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </>

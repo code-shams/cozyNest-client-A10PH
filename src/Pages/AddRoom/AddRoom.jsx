@@ -16,9 +16,7 @@ const AddRoom = () => {
         for (const key in formObj) {
             if (key !== "photo") {
                 if (!formObj[key]) {
-                    toast.error(
-                        `${key} is empty! Please fill that out.`
-                    );
+                    toast.error(`${key} is empty! Please fill that out.`);
                     return;
                 }
                 if (form.availability.value === "Select Availability :") {
@@ -37,7 +35,6 @@ const AddRoom = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.data.insertedId) {
-                    console.log(data?.data?.insertedId);
                     Swal.fire({
                         text: "Successfully Added a Post",
                         icon: "success",
@@ -123,21 +120,26 @@ const AddRoom = () => {
                             />
                         </div>
                         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 my-2 md:my-6 relative">
-                            <select
-                                type="text"
-                                name="availability"
-                                defaultValue="Select Availability :"
-                                className="cursor-pointer appearance-none mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
-                            >
-                                <option value="Select Availability :" disabled>
-                                    Select Availability :
-                                </option>
-                                <option value="Available">Available</option>
-                                <option value="Booked">Booked</option>
-                            </select>
-                            <span className="absolute right-134 top-6">
-                                <FaChevronDown className="size-4 z-10"></FaChevronDown>
-                            </span>
+                            <div className="relative w-full sm:w-1/2">
+                                <select
+                                    type="text"
+                                    name="availability"
+                                    defaultValue="Select Availability :"
+                                    className="cursor-pointer appearance-none mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-4 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                >
+                                    <option
+                                        value="Select Availability :"
+                                        disabled
+                                    >
+                                        Select Availability :
+                                    </option>
+                                    <option value="Available">Available</option>
+                                    <option value="Booked">Booked</option>
+                                </select>
+                                <span className="absolute right-2 top-6 z-index">
+                                    <FaChevronDown className="size-4"></FaChevronDown>
+                                </span>
+                            </div>
                             <input
                                 type="text"
                                 name="photo"

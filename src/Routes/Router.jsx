@@ -36,14 +36,6 @@ export const router = createBrowserRouter([
                 ),
             },
             {
-                path: "update-room",
-                element: (
-                    <PrivateRoute>
-                        <UpdateRoom></UpdateRoom>
-                    </PrivateRoute>
-                ),
-            },
-            {
                 path: "browse-rooms",
                 hydrateFallbackElement: <Loader></Loader>,
                 loader: () => fetch("https://cozy-nest-server.vercel.app/post"),
@@ -67,6 +59,19 @@ export const router = createBrowserRouter([
                 element: (
                     <PrivateRoute>
                         <Details></Details>
+                    </PrivateRoute>
+                ),
+            },
+            {
+                path: "/post-update/:id",
+                hydrateFallbackElement: <Loader></Loader>,
+                loader: ({ params }) =>
+                    fetch(
+                        `https://cozy-nest-server.vercel.app/post/?_id=${params.id}`
+                    ),
+                element: (
+                    <PrivateRoute>
+                        <UpdateRoom></UpdateRoom>
                     </PrivateRoute>
                 ),
             },

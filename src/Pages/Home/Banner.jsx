@@ -27,7 +27,7 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="w-full p-2 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-teal-50">
                         <img
-                            className="h-41 md:h-80 group-hover:scale-110 md:translate-y-16 group-hover:translate-y-12 transition-all duration-500"
+                            className="h-41 md:h-80 group-hover:scale-110 md:translate-y-16 md:group-hover:translate-y-12 transition-all duration-500"
                             src={girlPic}
                             alt=""
                         />
@@ -70,7 +70,7 @@ const Banner = () => {
                         </div>
                         <img
                             style={{ transform: "scaleX(-1)" }}
-                            className="h-46 md:h-80 :scale-110 md:translate-y-16 group-hover:translate-y-12 group-hover:scale-110 transition-transform duration-500"
+                            className="h-46 md:h-80 :scale-110 md:translate-y-16 md:group-hover:translate-y-12 group-hover:scale-110 transition-transform duration-500"
                             src={boyPic2}
                             alt=""
                         />
@@ -79,7 +79,7 @@ const Banner = () => {
                 <SwiperSlide>
                     <div className="w-full p-2 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-red-50">
                         <img
-                            className="h-46 md:h-80 transition-transform duration-500 group-hover:transform group-hover:scale-110 :scale-110 md:translate-y-16 group-hover:translate-y-12"
+                            className="h-46 md:h-80 transition-transform duration-500 group-hover:transform group-hover:scale-110 :scale-110 md:translate-y-16 md:group-hover:translate-y-12"
                             src={girlPic2}
                             alt=""
                         />
@@ -123,7 +123,7 @@ const Banner = () => {
                         </div>
                         <img
                             style={{ transform: "scaleX(-1)" }}
-                            className="h-46 md:h-80 :scale-110 md:translate-y-16 group-hover:translate-y-12 group-hover:scale-110 transition-transform duration-500"
+                            className="h-46 md:h-80 :scale-110 md:translate-y-16 md:group-hover:translate-y-12 group-hover:scale-110 transition-transform duration-500"
                             src={boyPic3}
                             alt=""
                         />
