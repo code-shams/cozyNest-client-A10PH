@@ -24,12 +24,12 @@ const AddRoom = () => {
                     setLoading(false);
                     return;
                 }
-                if (form.availability.value === "Select Availability :") {
-                    toast.error(`Please Select Availability!`);
-                    setLoading(false);
-                    return;
-                }
             }
+        }
+        if (form.availability.value === "Select Availability :") {
+            toast.error(`Please Select Availability!`);
+            setLoading(false);
+            return;
         }
         fetch("https://cozy-nest-server.vercel.app/post", {
             method: "POST",
