@@ -50,7 +50,7 @@ const SignIn = () => {
         <div className="py-5 w-11/12 max-w-[1550px] mx-auto">
             <title>Sign In</title>
             <div
-                className="border border-teal-200 bg-white py-3 px-4 sm:p-5 space-y-3 rounded-lg shadow-lg pri-font
+                className="border border-teal-200 bg-base-200 py-3 px-4 sm:p-5 space-y-3 rounded-xl shadow-lg pri-font
             flex flex-col-reverse md:flex-row-reverse justify-between gap-3"
             >
                 <div className="md:w-1/3">

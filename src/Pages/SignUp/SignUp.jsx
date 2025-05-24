@@ -58,9 +58,9 @@ const SignUp = () => {
             });
     };
     return (
-        <div className="my-5 w-11/12 max-w-[1550px] mx-auto rounded-lg shadow-lg bg-white">
+        <div className="my-5 w-11/12 max-w-[1550px] mx-auto shadow-lg bg-base-200 rounded-xl">
             <title>SignUp</title>
-            <div className="border-2 border-teal-100 p-2 md:py-3 md:px-4 sm:p-5 pri-font flex flex-col-reverse md:flex-row gap-5 md:gap-20">
+            <div className="rounded-lg p-2 md:py-3 md:px-4 sm:p-5 pri-font flex flex-col-reverse md:flex-row gap-5 md:gap-20">
                 <div className="md:w-1/2 space-y-3">
                     <h1 className="text-center text-xl md:text-2xl lg:text-3xl font-bold">
                         Sign Up
@@ -79,7 +79,7 @@ const SignUp = () => {
                                 name="name"
                                 id="name"
                                 placeholder="Name"
-                                className="w-full px-4 py-3 rounded-xs dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                                className="w-full px-4 py-3 rounded-xs border border-gray-500 dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                             />
                         </div>
                         <div className="space-y-1 text-sm">
@@ -92,7 +92,7 @@ const SignUp = () => {
                                 name="email"
                                 id="email"
                                 placeholder="Email"
-                                className="w-full px-4 py-3 rounded-xs dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                                className="w-full px-4 py-3 rounded-xs border border-gray-500 dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                             />
                         </div>
                         <div className="space-y-1 text-sm">
@@ -104,7 +104,7 @@ const SignUp = () => {
                                 type="text"
                                 name="photo"
                                 placeholder="Photo URL"
-                                className="w-full px-4 py-3 rounded-xs dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                                className="w-full px-4 py-3 rounded-xs border border-gray-500 dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                             />
                         </div>
                         <div className="relative space-y-1 text-sm">
@@ -117,7 +117,7 @@ const SignUp = () => {
                                 name="password"
                                 id="password"
                                 placeholder="Password"
-                                className="w-full px-4 py-3 rounded-xs dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
+                                className="w-full px-4 py-3 rounded-xs border border-gray-500 dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
                             />
                             {showPass || (
                                 <button
