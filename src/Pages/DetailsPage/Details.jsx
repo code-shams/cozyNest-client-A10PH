@@ -33,6 +33,8 @@ const Details = () => {
     const [likeStatus, setLikeStatus] = useState(false);
 
     const handleLike = () => {
+        setLikes(likes + 1);
+        setLikeStatus(true);
         fetch(`https://cozy-nest-server.vercel.app/post/${_id}`, {
             method: "PATCH",
             headers: {
@@ -43,8 +45,6 @@ const Details = () => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.data.matchedCount) {
-                    setLikes(likes + 1);
-                    setLikeStatus(true);
                     toast.success("Thank you for you feedback! ", {
                         position: "bottom-center",
                         autoClose: 1000,
