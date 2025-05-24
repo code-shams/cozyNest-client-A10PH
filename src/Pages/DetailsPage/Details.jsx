@@ -105,7 +105,7 @@ const Details = () => {
                                 <button
                                     onClick={handleLike}
                                     disabled
-                                    className="cursor-not-allowed sec-font py-1 px-3 md:px-5 border-y-5 opacity-50 border-t-blue-300 rounded-xl font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
+                                    className="cursor-not-allowed sec-font py-1 px-3 md:px-5 border-2 border-accent opacity-50 rounded-full font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
                                 >
                                     <span className="flex items-center gap-1 text-xs md:text-base">
                                         <FaThumbsUp className="text-rose-600 size-3 md:size-5"></FaThumbsUp>
@@ -115,7 +115,7 @@ const Details = () => {
                             ) : (
                                 <button
                                     onClick={handleLike}
-                                    className="sec-font cursor-pointer py-1 px-3 md:px-5 border-y-5  border-t-blue-300 rounded-xl font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
+                                    className="sec-font cursor-pointer py-1 px-3 md:px-5 border-2 border-accent rounded-full font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
                                 >
                                     <span className="flex items-center gap-1 text-xs md:text-base">
                                         <FaThumbsUp className="text-rose-600 size-3 md:size-5"></FaThumbsUp>
