@@ -50,7 +50,7 @@ const Details = () => {
     return (
         <div className="max-w-[1515px] w-11/12 mx-auto mt-5 md:mt-10">
             <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0  shadow-xl group">
-                <h1 className="text-center text-sm p-1 sm:p-0 sm:text-xl md:text-2xl font-extrabold pri-font bg-black text-lime-200 rounded-b-full w-full lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 opacity-80 group-hover:opacity-100 overflow-hidden">
+                <h1 className="text-center text-sm p-1 sm:p-0 sm:text-xl md:text-2xl font-extrabold pri-font bg-black text-secondary rounded-b-full w-full lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500  overflow-hidden">
                     {title}
                 </h1>
                 <div className="mt-3 md:mt-6">
@@ -71,7 +71,7 @@ const Details = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-start sm:items-end space-y-1">
-                            <span className="opacity-80 text-xs md:text-base text-rose-700 rounded-xl font-bold pri-font">
+                            <span className="-80 text-xs md:text-base text-rose-700 rounded-xl font-bold pri-font">
                                 {likes} people interested in
                             </span>
                             {user.displayName === name &&

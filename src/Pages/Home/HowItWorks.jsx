@@ -4,8 +4,8 @@ import { Link } from "react-router";
 
 const HowItWorks = () => {
     return (
-        <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 mt-10 group shadow overflow-clip">
-            <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-lime-200 rounded-b-full md:w-3/4 lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 opacity-80 hover:opacity-100 overflow-hidden mb-8">
+        <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 mt-10 group shadow-md overflow-clip">
+            <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-secondary rounded-b-full md:w-3/4 lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 overflow-hidden mb-8">
                 Find, Connect, Move In
             </h1>
 

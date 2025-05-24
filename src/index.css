@@ -12,17 +12,19 @@
     name: "light";
     default: true;
     --color-primary: blue;
+    --color-secondary: #ffe4e6;
     --color-base-100: #f0f9ff;
 }
 
 @plugin "daisyui/theme" {
     name: "dark";
-    --color-primary: black;
-    --color-secondary: black;
-    --color-accent: black;
-    --color-base-100: black;
-    --color-base-200: black;
-    --color-base-300: black;
+    --color-primary: #059669;
+    --color-secondary: #f43f5e;
+    
+    --color-accent: #10b981;
+    --color-base-100: #0f172a;
+    --color-base-200: #1e293b;
+    --color-base-300: #334155;
 }
 
 .pri-font {

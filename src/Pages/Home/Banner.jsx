@@ -1,10 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import girlPic from "../../assets/OpenPeeps/pg1.png";
 import girlPic2 from "../../assets/OpenPeeps/pg2.png";
-// import girlPic6 from "../../assets/OpenPeeps/pg6.png";
-// import boyPic1 from "../../assets/OpenPeeps/pb3.png";
 import boyPic2 from "../../assets/OpenPeeps/pb4.png";
 import boyPic3 from "../../assets/OpenPeeps/pb5.png";
 import { Typewriter } from "react-simple-typewriter";
@@ -25,14 +23,14 @@ const Banner = () => {
             >
                 <SwiperSlide>
                     <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-teal-50">
-                        <div className="w-32 h-32 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
+                        <div className="w-32 h-32 mx-5 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
                             <img
                                 className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 bg-emerald-100 rounded-full"
                                 src={girlPic}
                                 alt=""
                             />
                         </div>
-                        <div className="sec-font text-center group-hover:scale-105 transition-all duration-500 flex-1 md:ml-4">
+                        <div className="sec-font text-black text-center group-hover:scale-105 transition-all duration-500 flex-1 md:ml-4">
                             <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Welcome
                                 <Typewriter
@@ -52,7 +50,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-green-50">
-                        <div className="sec-font text-center group-hover:scale-105 transition-all duration-500 flex-1 md:mr-4 order-2 md:order-1">
+                        <div className="sec-font text-black text-center group-hover:scale-105 transition-all duration-500 flex-1 md:mr-4 order-2 md:order-1">
                             <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Find
                                 <Typewriter
@@ -68,7 +66,7 @@ const Banner = () => {
                                 people.
                             </p>
                         </div>
-                        <div className="w-32 h-32 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0 order-1 md:order-2">
+                        <div className="w-32 h-32 mx-5 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0 order-1 md:order-2">
                             <img
                                 style={{ transform: "scaleX(-1)" }}
                                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 bg-green-100 rounded-full"
@@ -80,14 +78,14 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-red-50">
-                        <div className="w-32 h-32 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
+                        <div className="w-32 h-32 mx-5 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
                             <img
                                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 bg-red-100 rounded-full"
                                 src={girlPic2}
                                 alt=""
                             />
                         </div>
-                        <div className="sec-font text-center group-hover:scale-105 transition-all duration-500 flex-1 md:ml-4">
+                        <div className="sec-font text-black text-center group-hover:scale-105 transition-all duration-500 flex-1 md:ml-4">
                             <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Find.
                                 <Typewriter
@@ -107,7 +105,7 @@ const Banner = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-emerald-50">
-                        <div className="sec-font text-center group-hover:scale-105 transition-all duration-500 flex-1 md:mr-4 order-2 md:order-1">
+                        <div className="sec-font text-black text-center group-hover:scale-105 transition-all duration-500 flex-1 md:mr-4 order-2 md:order-1">
                             <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Host
                                 <Typewriter
@@ -123,7 +121,7 @@ const Banner = () => {
                                 makes it easy and meaningful.
                             </p>
                         </div>
-                        <div className="w-32 h-32 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0 order-1 md:order-2">
+                        <div className="w-32 h-32 mx-5 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0 order-1 md:order-2">
                             <img
                                 style={{ transform: "scaleX(-1)" }}
                                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 bg-teal-100 rounded-full"

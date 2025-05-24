@@ -11,7 +11,7 @@ import HowItWorks from "./HowItWorks";
 const Homepage = () => {
     const { data } = useLoaderData();
     return (
-        <div className="max-w-[1515px] w-11/12 mx-auto">
+        <div className="max-w-[1515px] w-11/12 mx-auto lg:space-y-12">
             <section>
                 <Banner></Banner>
             </section>

@@ -7,9 +7,6 @@ import { AuthContext } from "../Contexts/AuthProvider";
 import Loader from "../Components/Loader/Loader";
 
 const MainLayout = () => {
-    // useEffect(() => {
-    //     themeChange(false);
-    // }, []);
     const { loading } = use(AuthContext);
     const [showLoader, setShowLoader] = useState(true);
     const navigation = useNavigation();
@@ -26,7 +23,7 @@ const MainLayout = () => {
 
     return (
         <div className="bg-base-100">
-            {loading || showLoader || navigation.state === "loading"? (
+            {loading || showLoader || navigation.state === "loading" ? (
                 <Loader></Loader>
             ) : (
                 <>

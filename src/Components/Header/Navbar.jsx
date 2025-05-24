@@ -3,110 +3,116 @@ import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../Contexts/AuthProvider";
 import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import { GiArchiveRegister } from "react-icons/gi";
+import ThemeToggle from "../ThemeToggle";
 
 const Navbar = () => {
     const { user, logoutUser } = use(AuthContext);
     return (
-        <nav className="bg-white pri-font flex items-center justify-between max-w-[1515px] w-11/12 mx-auto px-4 py-6 rounded-b-3xl shadow-lg">
+        <nav className="bg-base-200 pri-font flex items-center justify-between max-w-[1515px] w-11/12 mx-auto px-4 py-6 rounded-b-3xl shadow-lg border-b-7 border-base-300">
             <div className="flex justify-between flex-row-reverse gap-2 items-center w-full lg:w-auto">
-                <div className="dropdown lg:hidden">
-                    <div tabIndex={0} role="button" className="">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 scale-120"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                <div>
+                    <div className="dropdown lg:hidden">
+                        <div tabIndex={0} role="button" className="">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5 scale-120"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                {" "}
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h16M4 18h7"
+                                />{" "}
+                            </svg>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content border bg-lime-50 border-teal-50 rounded-box z-10 mt-2 w-52 p-2 shadow -right-5"
                         >
-                            {" "}
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h16M4 18h7"
-                            />{" "}
-                        </svg>
-                    </div>
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content border bg-lime-50 border-teal-50 rounded-box z-10 mt-2 w-52 p-2 shadow -right-5"
-                    >
-                        <li>
-                            <Link
-                                to="/"
-                                className="text-black font-medium text-base"
-                            >
-                                Home
-                            </Link>
-                            <div className="absolute right-0">
-                                {user ? (
-                                    <img
-                                        className="rounded-full w-9 h-9"
-                                        src={user.photoURL}
-                                        alt=""
-                                    />
-                                ) : (
-                                    ""
-                                )}
-                            </div>
-                        </li>
-                        <li>
-                            <Link
-                                to="/add-room"
-                                className="text-black font-medium text-base"
-                            >
-                                Add a Post
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/browse-rooms"
-                                className="text-black font-medium text-base"
-                            >
-                                Browse Posts
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                to="/my-rooms"
-                                className="text-black font-medium text-base"
-                            >
-                                My Posts
-                            </Link>
-                        </li>
-                        {user ? (
                             <li>
-                                <button
-                                    onClick={() => logoutUser()}
-                                    className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
-                                >
-                                    <FaSignOutAlt></FaSignOutAlt>
-                                    Sign Out
-                                </button>
+                                <ThemeToggle></ThemeToggle>
                             </li>
-                        ) : (
-                            <div className="grid gap-2">
+                            <li>
+                                <Link
+                                    to="/"
+                                    className="text-black font-medium text-base"
+                                >
+                                    Home
+                                </Link>
+                                <div className="absolute right-0">
+                                    {user ? (
+                                        <img
+                                            className="rounded-full w-9 h-9"
+                                            src={user.photoURL}
+                                            alt=""
+                                        />
+                                    ) : (
+                                        ""
+                                    )}
+                                </div>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/add-room"
+                                    className="text-black font-medium text-base"
+                                >
+                                    Add a Post
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/browse-rooms"
+                                    className="text-black font-medium text-base"
+                                >
+                                    Browse Posts
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/my-rooms"
+                                    className="text-black font-medium text-base"
+                                >
+                                    My Posts
+                                </Link>
+                            </li>
+                            {user ? (
                                 <li>
-                                    <Link
-                                        to="/auth/sign-in"
+                                    <button
+                                        onClick={() => logoutUser()}
                                         className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
                                     >
-                                        <FaSignInAlt></FaSignInAlt>
-                                        Sign In
-                                    </Link>
+                                        <FaSignOutAlt></FaSignOutAlt>
+                                        Sign Out
+                                    </button>
                                 </li>
-                                <li>
-                                    <Link
-                                        to="/auth/sign-up"
-                                        className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
-                                    >
-                                        <GiArchiveRegister></GiArchiveRegister>
-                                        Sign Up
-                                    </Link>
-                                </li>
-                            </div>
-                        )}
-                    </ul>
+                            ) : (
+                                <div className="grid gap-2">
+                                    <li>
+                                        <Link
+                                            to="/auth/sign-in"
+                                            className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
+                                        >
+                                            <FaSignInAlt></FaSignInAlt>
+                                            Sign In
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            to="/auth/sign-up"
+                                            className="cursor-pointer transition duration-300 bg-black py-2 px-4 rounded-xs text-white font-medium items-center gap-2 flex"
+                                        >
+                                            <GiArchiveRegister></GiArchiveRegister>
+                                            Sign Up
+                                        </Link>
+                                    </li>
+                                </div>
+                            )}
+                        </ul>
+                    </div>
                 </div>
                 {/* Logo & Brand */}
                 <Link to="/" className="flex gap-2 items-center">
@@ -125,7 +131,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:opacity-80 hover:text-emerald-700 transition duration-300 text-base lg:text-lg"
+                            : "hover:-80 hover:text-emerald-700 transition duration-300 text-base lg:text-lg"
                     }
                 >
                     Home
@@ -135,7 +141,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:opacity-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
+                            : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
                     }
                 >
                     Add a Post
@@ -145,7 +151,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:opacity-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
+                            : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
                     }
                 >
                     Browse Posts
@@ -155,15 +161,17 @@ const Navbar = () => {
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:opacity-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
+                            : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
                     }
                 >
                     My Posts
                 </NavLink>
             </div>
-
             {/* Authentication */}
-            <div className="text-lg space-x-4">
+            <div className="text-lg space-x-4 flex items-center">
+                <div className="mr-5 hidden lg:block">
+                    <ThemeToggle></ThemeToggle>
+                </div>
                 {user ? (
                     <div className="group relative">
                         <img
@@ -171,7 +179,7 @@ const Navbar = () => {
                             src={user.photoURL}
                             alt=""
                         />
-                        <div className="z-10 bg-lime-50 absolute w-64 -right-4 top-20 p-5 rounded-xl border border-teal-50 shadow space-y-3 opacity-0 -translate-y-96 group-hover:translate-0 group-hover:opacity-100 transition-all duration-500">
+                        <div className="z-10 bg-lime-50 absolute w-64 -right-4 top-20 p-5 rounded-xl border border-teal-50 shadow space-y-3 -0 -translate-y-96 group-hover:translate-0 group-hover:-100 transition-all duration-500">
                             <p className="font-extrabold pri-font text-xl w-full text-right">
                                 {user.displayName}
                             </p>
