@@ -31,8 +31,8 @@ const Details = () => {
     } = data[0];
 
     let photo;
-    if (data.photo) {
-        photo = data.photo;
+    if (data[0]?.photo) {
+        photo = data[0].photo;
     } else {
         photo = pic;
     }
