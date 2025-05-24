@@ -1,4 +1,5 @@
 import React, { use, useEffect, useState } from "react";
+import pic from "../../assets/OpenPeeps/groupPic.png";
 import {
     FaHeart,
     FaPhoneAlt,
@@ -19,7 +20,6 @@ const Details = () => {
         _id,
         email,
         name,
-        photo,
         location,
         rentAmount,
         roomType,
@@ -29,6 +29,13 @@ const Details = () => {
         details,
         likeCount,
     } = data[0];
+
+    let photo;
+    if (data.photo) {
+        photo = data.photo;
+    } else {
+        photo = pic;
+    }
     const [likes, setLikes] = useState(likeCount);
     const [likeStatus, setLikeStatus] = useState(false);
 
