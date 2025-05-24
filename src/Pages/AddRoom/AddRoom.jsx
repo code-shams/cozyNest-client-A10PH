@@ -62,7 +62,7 @@ const AddRoom = () => {
             {loading ? (
                 <Loader></Loader>
             ) : (
-                <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 shadow-lg group hover:shadow-xl transition-all duration-500 border border-lime-100">
+                <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 shadow-lg group hover:shadow-xl transition-all duration-500  overflow-hidden">
                     <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-secondary rounded-b-full md:w-1/2 lg:w-1/3 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500  overflow-hidden">
                         New Post
                     </h1>
@@ -79,14 +79,14 @@ const AddRoom = () => {
                                 <input
                                     type="text"
                                     name="name"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-gray-50 px-3 py-4  shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-gray-50 px-3 py-4 shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     readOnly
                                     value={user.displayName}
                                 />
                                 <input
                                     type="text"
                                     name="email"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-gray-50 px-3 py-4  shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-gray-50 px-3 py-4  shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     readOnly
                                     value={user.email}
                                 />
@@ -96,13 +96,13 @@ const AddRoom = () => {
                                 <input
                                     type="text"
                                     name="title"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     placeholder="Title"
                                 />
                                 <input
                                     type="text"
                                     name="location"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     placeholder="Location"
                                 />
                             </div>
@@ -111,13 +111,13 @@ const AddRoom = () => {
                                 <input
                                     type="text"
                                     name="rentAmount"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     placeholder="Rent"
                                 />
                                 <input
                                     type="text"
                                     name="roomType"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     placeholder="Room type"
                                 />
                             </div>
@@ -126,13 +126,13 @@ const AddRoom = () => {
                                 <input
                                     type="text"
                                     name="preferences"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     placeholder="Preferences"
                                 />
                                 <input
                                     type="text"
                                     name="contactInfo"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4  shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     placeholder="Contact"
                                 />
                             </div>
@@ -142,7 +142,7 @@ const AddRoom = () => {
                                         type="text"
                                         name="availability"
                                         defaultValue="Select Availability :"
-                                        className="cursor-pointer appearance-none mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-4 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                        className="cursor-pointer appearance-none mt-1 block w-full rounded-md border border-slate-300 bg-white px-3 py-4 shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     >
                                         <option
                                             value="Select Availability :"
@@ -162,7 +162,7 @@ const AddRoom = () => {
                                 <input
                                     type="text"
                                     name="photo"
-                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
+                                    className="mt-1 block w-full sm:w-1/2 rounded-md border border-slate-300 bg-white px-3 py-4 shadow-sm placeholder:font-semibold text-black focus:border-black focus:outline-none focus:ring-1 focus:ring-black sm:text-sm"
                                     placeholder="Photo Url (Optional)"
                                 />
                             </div>
@@ -178,7 +178,7 @@ const AddRoom = () => {
                             <div className="text-center ">
                                 <button
                                     type="submit"
-                                    className="btn btn-md w-full sm:w-auto px-12 md:text-lg bg-black text-white hover:scale-110 rounded-full transition-all duration-300"
+                                    className="btn btn-md w-full sm:w-auto px-12 md:text-lg mt-2 bg-accent text-white hover:scale-110 rounded-full transition-all duration-300"
                                 >
                                     Add
                                 </button>

@@ -173,14 +173,14 @@ const Navbar = () => {
                     <ThemeToggle></ThemeToggle>
                 </div>
                 {user ? (
-                    <div className="group relative">
+                    <div className="relative group">
                         <img
                             className="rounded-full cursor-pointer w-16 hidden lg:block"
                             src={user.photoURL}
                             alt=""
                         />
-                        <div className="z-10 bg-lime-50 absolute w-64 -right-4 top-20 p-5 rounded-xl border border-teal-50 shadow space-y-3 -0 -translate-y-96 group-hover:translate-0 group-hover:-100 transition-all duration-500">
-                            <p className="font-extrabold pri-font text-xl w-full text-right">
+                        <div className="z-10 bg-lime-50 absolute w-64 -right-4 top-20 p-5 rounded-xl border border-teal-50 shadow space-y-3 -translate-y-96 group-hover:translate-0 group-hover:-100 transition-all duration-500">
+                            <p className="font-extrabold pri-font text-xl w-full text-right text-black">
                                 {user.displayName}
                             </p>
                             <div className="flex justify-end">

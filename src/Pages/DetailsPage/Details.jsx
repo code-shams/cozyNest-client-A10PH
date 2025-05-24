@@ -1,8 +1,15 @@
 import React, { use, useEffect, useState } from "react";
-import { FaPhoneAlt, FaThumbsDown, FaThumbsUp, FaUser } from "react-icons/fa";
+import {
+    FaHeart,
+    FaPhoneAlt,
+    FaThumbsDown,
+    FaThumbsUp,
+    FaUser,
+} from "react-icons/fa";
 import { useLoaderData } from "react-router";
 import { AuthContext } from "../../Contexts/AuthProvider";
 import Swal from "sweetalert2";
+import { Bounce, toast } from "react-toastify";
 
 const Details = () => {
     const { user } = use(AuthContext);
@@ -38,6 +45,17 @@ const Details = () => {
                 if (data.data.matchedCount) {
                     setLikes(likes + 1);
                     setLikeStatus(true);
+                    toast.success("Thank you for you feedback! ", {
+                        position: "bottom-center",
+                        autoClose: 1000,
+                        hideProgressBar: true,
+                        closeOnClick: false,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "light",
+                        transition: Bounce,
+                    });
                 } else {
                     Swal.fire({
                         text: "Something went wrong!!!",
@@ -71,12 +89,22 @@ const Details = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-start sm:items-end space-y-1">
-                            <span className="-80 text-xs md:text-base text-rose-700 rounded-xl font-bold pri-font">
+                            <span className="text-xs md:text-base text-rose-600 rounded-xl font-bold pri-font flex items-center gap-2">
+                                <FaHeart className="animate-bounce"></FaHeart>
                                 {likes} people interested in
                             </span>
                             {user.displayName === name &&
                             user.email === email ? (
-                                ""
+                                <button
+                                    onClick={handleLike}
+                                    disabled
+                                    className="cursor-not-allowed sec-font py-1 px-3 md:px-5 border-y-5 opacity-50 border-t-blue-300 rounded-xl font-bold pri-font flex gap-2 hover:scale-105 hover:shadow-lg transition-all duration-300 mr-3"
+                                >
+                                    <span className="flex items-center gap-1 text-xs md:text-base">
+                                        <FaThumbsUp className="text-rose-600 size-3 md:size-5"></FaThumbsUp>
+                                        Like
+                                    </span>
+                                </button>
                             ) : (
                                 <button
                                     onClick={handleLike}
@@ -153,7 +181,7 @@ const Details = () => {
                             </p>
                         </div>
                     </section>
-                    <h1 className="text-center text-sm text-base md:text-2xl pri-font font-extrabold mt-6 md:w-1/2 mx-auto border-b-2 text-rose-400 border-dashed">
+                    <h1 className="text-center text-base md:text-2xl pri-font font-extrabold mt-6 md:w-1/2 mx-auto border-b-2 text-rose-400 border-dashed">
                         Details
                     </h1>
                     <p className="text-center text-sm md:text-base mt-2 sec-font">

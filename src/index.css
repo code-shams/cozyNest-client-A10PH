@@ -14,17 +14,24 @@
     --color-primary: blue;
     --color-secondary: #ffe4e6;
     --color-base-100: #f0f9ff;
+    --color-banner1: #f0fdfa;
+    --color-banner2: #f0fdf4;
+    --color-banner3: #fef2f2;
+    --color-banner4: #ecfdf5;
 }
 
 @plugin "daisyui/theme" {
     name: "dark";
     --color-primary: #059669;
     --color-secondary: #f43f5e;
-    
     --color-accent: #10b981;
     --color-base-100: #0f172a;
     --color-base-200: #1e293b;
     --color-base-300: #334155;
+    --color-banner1: #99f6e4;
+    --color-banner2: #bbf7d0;
+    --color-banner3: #fecaca;
+    --color-banner4: #a7f3d0;
 }
 
 .pri-font {

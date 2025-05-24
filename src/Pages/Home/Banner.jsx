@@ -22,7 +22,7 @@ const Banner = () => {
                 className="py-6 shadow-xl rounded-xl"
             >
                 <SwiperSlide>
-                    <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-teal-50">
+                    <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-[var(--color-banner1)]">
                         <div className="w-32 h-32 mx-5 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
                             <img
                                 className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 bg-emerald-100 rounded-full"
@@ -49,7 +49,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-green-50">
+                    <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-[var(--color-banner2)]">
                         <div className="sec-font text-black text-center group-hover:scale-105 transition-all duration-500 flex-1 md:mr-4 order-2 md:order-1">
                             <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Find
@@ -77,7 +77,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-red-50">
+                    <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-[var(--color-banner3)]">
                         <div className="w-32 h-32 mx-5 md:w-80 md:h-80 flex items-center justify-center flex-shrink-0">
                             <img
                                 className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 bg-red-100 rounded-full"
@@ -104,7 +104,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-emerald-50">
+                    <div className="w-full p-2 h-60 md:h-96 md:p-5 flex flex-col md:flex-row items-center justify-between md:justify-center group bg-[var(--color-banner4)]">
                         <div className="sec-font text-black text-center group-hover:scale-105 transition-all duration-500 flex-1 md:mr-4 order-2 md:order-1">
                             <h1 className="text-xl sm:text-2xl md:text-4xl font-extrabold">
                                 Host
