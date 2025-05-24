@@ -5,12 +5,12 @@ import { Link } from "react-router";
 const HowItWorks = () => {
     return (
         <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 mt-10 group shadow-md overflow-clip">
-            <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-secondary rounded-b-full md:w-3/4 lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 overflow-hidden mb-8">
+            <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-secondary rounded-b-full md:w-3/4 lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 overflow-hidden lg:mb-8">
                 Find, Connect, Move In
             </h1>
 
-            <div className="mt-8 grid md:grid-cols-3 gap-3 md:gap-8">
-                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-6 rounded-lg ">
+            <div className="mt-2 lg:mt-8 grid md:grid-cols-3 gap-3 md:gap-8">
+                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-2 lg:p-6 rounded-lg ">
                     <div className="bg-accent/10 p-4 rounded-full mb-4 group-hover:bg-accent/20 transition-all duration-300">
                         <FaSearch className="size-10 md:size-14 lg:size-16 text-accent transition-all duration-300 group-hover:text-accent-focus" />
                     </div>
@@ -25,7 +25,7 @@ const HowItWorks = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-6 rounded-lg ">
+                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-2 lg:p-6 rounded-lg ">
                     <div className="bg-accent/10 p-4 rounded-full mb-4 group-hover:bg-accent/20 transition-all duration-300">
                         <FaUserFriends className="size-10 md:size-14 lg:size-16 text-accent transition-all duration-300 group-hover:text-accent-focus" />
                     </div>
@@ -40,7 +40,7 @@ const HowItWorks = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-6 rounded-lg ">
+                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-2 lg:p-6 rounded-lg ">
                     <div className="bg-accent/10 p-4 rounded-full mb-4 group-hover:bg-accent/20 transition-all duration-300">
                         <FaHome className="size-10 md:size-14 lg:size-16 text-accent transition-all duration-300 group-hover:text-accent-focus" />
                     </div>
