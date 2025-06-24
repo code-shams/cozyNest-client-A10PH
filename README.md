@@ -8,9 +8,6 @@ Cozynest is a web platform that helps individuals find compatible roommates base
 
 ## 🚀 Key Features
 
--   🔐 **Authentication System**  
-    Users can sign up, log in with email/password or Google, and access protected routes securely.
-
 -   📝 **Add & Manage Listings**  
     Logged-in users can create, update, and delete roommate listings. Only the listing owner can modify their posts.
 
@@ -23,8 +20,6 @@ Cozynest is a web platform that helps individuals find compatible roommates base
 -   🌗 **Dark/Light Theme Toggle**  
     Switch between dark and light modes with a persistent UI setting.
 
--   🖼️ **Dynamic Home Page**  
-    Includes a slider banner, featured listings (limited to 6), and additional informational sections.
 
 ---
 
