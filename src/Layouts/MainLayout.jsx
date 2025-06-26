@@ -27,7 +27,7 @@ const MainLayout = () => {
                 <Loader></Loader>
             ) : (
                 <>
-                    <header className="">
+                    <header className="sticky top-0 z-50">
                         <Navbar></Navbar>
                     </header>
                     <main className="min-h-[calc(100vh-325px)]">

@@ -4,31 +4,16 @@ import { AuthContext } from "../../Contexts/AuthProvider";
 import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import { GiArchiveRegister } from "react-icons/gi";
 import ThemeToggle from "../ThemeToggle";
+import HamburgerMenuIcon from "./HamburgerMenuIcon";
 
 const Navbar = () => {
     const { user, logoutUser } = use(AuthContext);
     return (
-        <nav className="bg-base-200 pri-font flex items-center justify-between max-w-[1515px] w-11/12 mx-auto px-4 py-6 rounded-b-3xl shadow-lg border-b-7 border-base-300">
+        <nav className="bg-base-200 pri-font flex items-center justify-between max-w-[1515px] w-11/12 mx-auto px-4 py-4 rounded-b-3xl shadow-lg border-b-7 border-base-300">
             <div className="flex justify-between flex-row-reverse gap-2 items-center w-full lg:w-auto">
                 <div>
                     <div className="dropdown lg:hidden">
-                        <div tabIndex={0} role="button" className="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5 scale-120"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                {" "}
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h16M4 18h7"
-                                />{" "}
-                            </svg>
-                        </div>
+                        <HamburgerMenuIcon></HamburgerMenuIcon>
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content border bg-lime-50 border-teal-50 rounded-box z-10 mt-2 w-52 p-2 shadow -right-5"
@@ -137,16 +122,6 @@ const Navbar = () => {
                     Home
                 </NavLink>
                 <NavLink
-                    to="/add-room"
-                    className={({ isActive }) =>
-                        isActive
-                            ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
-                    }
-                >
-                    Add a Post
-                </NavLink>
-                <NavLink
                     to="/browse-rooms"
                     className={({ isActive }) =>
                         isActive
@@ -157,14 +132,24 @@ const Navbar = () => {
                     Browse Posts
                 </NavLink>
                 <NavLink
-                    to="/my-rooms"
+                    to="/about"
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
                             : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
                     }
                 >
-                    My Posts
+                    About
+                </NavLink>
+                <NavLink
+                    to="/faq"
+                    className={({ isActive }) =>
+                        isActive
+                            ? "font-extrabold pb-1 text-base lg:text-lg"
+                            : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
+                    }
+                >
+                    FAQ
                 </NavLink>
             </div>
             {/* Authentication */}
@@ -175,7 +160,7 @@ const Navbar = () => {
                 {user ? (
                     <div className="relative group">
                         <img
-                            className="rounded-full cursor-pointer w-16 hidden lg:block"
+                            className="rounded-full cursor-pointer w-10 hidden lg:block"
                             src={user.photoURL}
                             alt=""
                         />

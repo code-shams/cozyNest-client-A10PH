@@ -11,6 +11,8 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Details from "../Pages/DetailsPage/Details";
 import UpdateRoom from "../Pages/UpdateRoom/UpdateRoom";
 import Loader from "../Components/Loader/Loader";
+import About from "../Pages/About/About";
+import FAQ from "../Pages/FAQ/FAQ";
 
 const serverURL = import.meta.env.VITE_SERVER_URL;
 export const router = createBrowserRouter([
@@ -46,6 +48,14 @@ export const router = createBrowserRouter([
                         <MyRooms></MyRooms>
                     </PrivateRoute>
                 ),
+            },
+            {
+                path: "about",
+                Component: About,
+            },
+            {
+                path: "faq",
+                Component: FAQ,
             },
             {
                 path: "post-details/:id",
