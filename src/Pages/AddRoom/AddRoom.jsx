@@ -4,7 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import Loader from "../../Components/Loader/Loader";
-
+const serverURL = import.meta.env.VITE_SERVER_URL;
 const AddRoom = () => {
     const [loading, setLoading] = useState(false);
     const { user } = use(AuthContext);
@@ -31,7 +31,7 @@ const AddRoom = () => {
             setLoading(false);
             return;
         }
-        fetch("https://cozy-nest-server.vercel.app/post", {
+        fetch(`${serverURL}/post`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",

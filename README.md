@@ -20,7 +20,6 @@ Cozynest is a web platform that helps individuals find compatible roommates base
 -   🌗 **Dark/Light Theme Toggle**  
     Switch between dark and light modes with a persistent UI setting.
 
-
 ---
 
 ## 🔧 Tech Stack
@@ -69,7 +68,7 @@ Environment-sensitive values are stored securely using `.env` files and are **no
 ## 📦 Installation & Setup
 
 1. Clone this repo  
-   `git clone https://github.com/yourusername/cozynest.git`
+   `git clone https://github.com/code-shams/cozynest.git`
 
 2. Install dependencies  
    `npm install`
@@ -78,6 +77,12 @@ Environment-sensitive values are stored securely using `.env` files and are **no
 
 4. Run development server  
    `npm run dev`
+
+---
+
+## 🌐 Server-side Repository
+
+**Repository Link:** [https://github.com/code-shams/cozyNest-server-A10PH.git](https://github.com/code-shams/cozyNest-server-A10PH.git)
 
 ---
 

@@ -12,6 +12,7 @@ import Details from "../Pages/DetailsPage/Details";
 import UpdateRoom from "../Pages/UpdateRoom/UpdateRoom";
 import Loader from "../Components/Loader/Loader";
 
+const serverURL = import.meta.env.VITE_SERVER_URL;
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -21,10 +22,7 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 hydrateFallbackElement: <Loader></Loader>,
-                loader: () =>
-                    fetch(
-                        "https://cozy-nest-server.vercel.app/post?availability=Available"
-                    ),
+                loader: () => fetch(`${serverURL}/post?availability=Available`),
                 Component: Homepage,
             },
             {
@@ -38,7 +36,7 @@ export const router = createBrowserRouter([
             {
                 path: "browse-rooms",
                 hydrateFallbackElement: <Loader></Loader>,
-                loader: () => fetch("https://cozy-nest-server.vercel.app/post"),
+                loader: () => fetch(`${serverURL}/post`),
                 element: <BrowseRoom></BrowseRoom>,
             },
             {
@@ -53,9 +51,7 @@ export const router = createBrowserRouter([
                 path: "post-details/:id",
                 hydrateFallbackElement: <Loader></Loader>,
                 loader: ({ params }) =>
-                    fetch(
-                        `https://cozy-nest-server.vercel.app/post?_id=${params.id}`
-                    ),
+                    fetch(`${serverURL}/post?_id=${params.id}`),
                 element: (
                     <PrivateRoute>
                         <Details></Details>
@@ -66,9 +62,7 @@ export const router = createBrowserRouter([
                 path: "/post-update/:id",
                 hydrateFallbackElement: <Loader></Loader>,
                 loader: ({ params }) =>
-                    fetch(
-                        `https://cozy-nest-server.vercel.app/post/?_id=${params.id}`
-                    ),
+                    fetch(`${serverURL}/post/?_id=${params.id}`),
                 element: (
                     <PrivateRoute>
                         <UpdateRoom></UpdateRoom>

@@ -3,7 +3,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { useLoaderData, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import Loader from "../../Components/Loader/Loader";
-
+const serverURL = import.meta.env.VITE_SERVER_URL;
 const UpdateRoom = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
@@ -29,7 +29,7 @@ const UpdateRoom = () => {
         const form = e.target;
         const formData = new FormData(form);
         const formObj = Object.fromEntries(formData.entries());
-        fetch(`https://cozy-nest-server.vercel.app/post/${_id}`, {
+        fetch(`${serverURL}/post/${_id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json",

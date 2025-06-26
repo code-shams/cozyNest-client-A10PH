@@ -11,7 +11,7 @@ import { useLoaderData } from "react-router";
 import { AuthContext } from "../../Contexts/AuthProvider";
 import Swal from "sweetalert2";
 import { Bounce, toast } from "react-toastify";
-
+const serverURL = import.meta.env.VITE_SERVER_URL;
 const Details = () => {
     const { user } = use(AuthContext);
     const { data } = useLoaderData();
@@ -42,7 +42,7 @@ const Details = () => {
     const handleLike = () => {
         setLikes(likes + 1);
         setLikeStatus(true);
-        fetch(`https://cozy-nest-server.vercel.app/post/${_id}`, {
+        fetch(`${serverURL}/post/${_id}`, {
             method: "PATCH",
             headers: {
                 "content-type": "application/json",

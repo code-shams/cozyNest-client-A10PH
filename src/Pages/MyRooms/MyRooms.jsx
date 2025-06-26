@@ -3,16 +3,14 @@ import Loader from "../../Components/Loader/Loader";
 import { AuthContext } from "../../Contexts/AuthProvider";
 import MyRoom from "./MyRoom";
 import Swal from "sweetalert2";
-
+const serverURL = import.meta.env.VITE_SERVER_URL;
 const MyRooms = () => {
     const [loading, setLoading] = useState(true);
     const [userPosts, setUserPosts] = useState([]);
     const { user } = use(AuthContext);
 
     useEffect(() => {
-        fetch(
-            `https://cozy-nest-server.vercel.app/post?name=${user.displayName}&email=${user.email}`
-        )
+        fetch(`${serverURL}/post?name=${user.displayName}&email=${user.email}`)
             .then((res) => res.json())
             .then((data) => {
                 setUserPosts(data.data);
@@ -31,7 +29,7 @@ const MyRooms = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://cozy-nest-server.vercel.app/post/${id}`, {
+                fetch(`${serverURL}/post/${id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())
