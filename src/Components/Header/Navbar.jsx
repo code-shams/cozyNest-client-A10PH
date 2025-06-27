@@ -42,26 +42,36 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="/add-room"
-                                    className="text-black font-medium text-base"
-                                >
-                                    Add a Post
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
                                     to="/browse-rooms"
                                     className="text-black font-medium text-base"
                                 >
                                     Browse Posts
                                 </Link>
                             </li>
+                            {user && (
+                                <li>
+                                    <Link
+                                        to="/dashboard"
+                                        className="text-black font-medium text-base"
+                                    >
+                                        Dashboard
+                                    </Link>
+                                </li>
+                            )}
                             <li>
                                 <Link
-                                    to="/my-rooms"
+                                    to="/about"
                                     className="text-black font-medium text-base"
                                 >
-                                    My Posts
+                                    About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/faq"
+                                    className="text-black font-medium text-base"
+                                >
+                                    FAQ
                                 </Link>
                             </li>
                             {user ? (
@@ -116,7 +126,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:-80 hover:text-emerald-700 transition duration-300 text-base lg:text-lg"
+                            : "hover:-80 hover:text-primary transition duration-300 text-base lg:text-lg"
                     }
                 >
                     Home
@@ -126,17 +136,29 @@ const Navbar = () => {
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
+                            : "hover:-80 hover:text-primary transition duration-300  text-base lg:text-lg"
                     }
                 >
                     Browse Posts
                 </NavLink>
+                {user && (
+                    <NavLink
+                        to="/dashboard"
+                        className={({ isActive }) =>
+                            isActive
+                                ? "font-extrabold pb-1 text-base lg:text-lg"
+                                : "hover:-80 hover:text-primary transition duration-300  text-base lg:text-lg"
+                        }
+                    >
+                        Dashboard
+                    </NavLink>
+                )}
                 <NavLink
                     to="/about"
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
+                            : "hover:-80 hover:text-primary transition duration-300  text-base lg:text-lg"
                     }
                 >
                     About
@@ -146,7 +168,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                         isActive
                             ? "font-extrabold pb-1 text-base lg:text-lg"
-                            : "hover:-80 hover:text-emerald-700 transition duration-300  text-base lg:text-lg"
+                            : "hover:-80 hover:text-primary transition duration-300  text-base lg:text-lg"
                     }
                 >
                     FAQ
@@ -183,24 +205,16 @@ const Navbar = () => {
                     <div className="md:mr-1 space-x-5">
                         <NavLink
                             to="/auth/sign-in"
-                            className="relative hidden lg:inline-block px-2 py-1 font-medium group"
+                            className="hidden lg:inline-flex font-bold rounded-2xl btn btn-sm md:btn-md btn-outline border-2 hover:bg-accent transition-all duration-300 hover:shadow hover:text-black hover:-translate-y-1"
                         >
-                            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                            <span className="absolute inset-0 w-full h-full bg-white border-2 border-black transition duration-300  group-hover:bg-black"></span>
-                            <span className="relative text-black transition duration-300 group-hover:text-white">
-                                Sign In
-                            </span>
+                            Sign In
                         </NavLink>
 
                         <NavLink
                             to="/auth/sign-up"
-                            className="relative hidden lg:inline-block px-2 py-1 font-medium group"
+                            className="hidden lg:inline-flex font-bold rounded-2xl btn btn-sm md:btn-md btn-outline border-2 hover:bg-accent transition-all duration-300 hover:shadow hover:text-black hover:-translate-y-1"
                         >
-                            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                            <span className="absolute inset-0 w-full h-full bg-white border-2 border-black transition duration-300  group-hover:bg-black"></span>
-                            <span className="relative text-black transition duration-300 group-hover:text-white">
-                                Sign Up
-                            </span>
+                            Sign Up
                         </NavLink>
                     </div>
                 )}

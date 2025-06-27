@@ -1,15 +1,15 @@
 import React from "react";
 const FAQ = () => {
     return (
-        <div className="rounded-lg shadow-md p-2 pt-0 md:p-5 md:pt-0 mt-10 group overflow-clip">
-            <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-secondary rounded-b-full md:w-3/4 lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 overflow-hidden mb-8">
+        <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 mt-5 md:mt-10 group overflow-clip">
+            <h1 className="text-xl lg:text-3xl text-primary font-bold drop-shadow-lg border-b-3 text-center sm:w-max pri-font mx-auto mb-8">
                 Frequently Asked Questions
             </h1>
 
             <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto sec-font">
                 {/* FAQ Accordion */}
                 <div className="space-y-4">
-                    <div className="collapse collapse-plus shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl rounded-lg">
+                    <div className="collapse collapse-plus border border-slate-200  rounded-lg">
                         <input
                             type="radio"
                             name="my-accordion-3"
@@ -19,7 +19,7 @@ const FAQ = () => {
                             What is CozyNest?
                         </div>
                         <div className="collapse-content">
-                            <div className="h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent mb-3"></div>
+                            <div className="h-px bg-gradient-to-r from-transparent via-accent to-transparent mb-3"></div>
                             <p className="opacity-80 leading-relaxed">
                                 CozyNest is your trusted platform for finding
                                 the perfect roommate. We connect compatible
@@ -29,13 +29,13 @@ const FAQ = () => {
                         </div>
                     </div>
 
-                    <div className="collapse collapse-plus shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl rounded-lg">
+                    <div className="collapse collapse-plus border border-slate-200  rounded-lg">
                         <input type="radio" name="my-accordion-3" />
                         <div className="collapse-title text-lg font-semibold transition-colors duration-200">
                             How do I find a roommate?
                         </div>
                         <div className="collapse-content">
-                            <div className="h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent mb-3"></div>
+                            <div className="h-px bg-gradient-to-r from-transparent via-accent to-transparent mb-3"></div>
                             <p className="opacity-80 leading-relaxed">
                                 Create your profile, set your preferences, and
                                 browse through verified roommate listings. Use
@@ -46,13 +46,13 @@ const FAQ = () => {
                         </div>
                     </div>
 
-                    <div className="collapse collapse-plus shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl rounded-lg">
+                    <div className="collapse collapse-plus border border-slate-200  rounded-lg">
                         <input type="radio" name="my-accordion-3" />
                         <div className="collapse-title text-lg font-semibold transition-colors duration-200">
                             Is CozyNest free to use?
                         </div>
                         <div className="collapse-content">
-                            <div className="h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent mb-3"></div>
+                            <div className="h-px bg-gradient-to-r from-transparent via-accent to-transparent mb-3"></div>
                             <p className="opacity-80 leading-relaxed">
                                 Yes! Basic features including profile creation,
                                 browsing listings, and messaging potential
@@ -62,13 +62,13 @@ const FAQ = () => {
                         </div>
                     </div>
 
-                    <div className="collapse collapse-plus shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl rounded-lg">
+                    <div className="collapse collapse-plus border border-slate-200  rounded-lg">
                         <input type="radio" name="my-accordion-3" />
                         <div className="collapse-title text-lg font-semibold transition-colors duration-200">
                             How do I post a room for rent?
                         </div>
                         <div className="collapse-content">
-                            <div className="h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent mb-3"></div>
+                            <div className="h-px bg-gradient-to-r from-transparent via-accent to-transparent mb-3"></div>
                             <p className="opacity-80 leading-relaxed">
                                 Simply create an account, click "Post a Room",
                                 upload photos of your space, add details about
@@ -78,13 +78,13 @@ const FAQ = () => {
                         </div>
                     </div>
 
-                    <div className="collapse collapse-plus shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl rounded-lg">
+                    <div className="collapse collapse-plus border border-slate-200  rounded-lg">
                         <input type="radio" name="my-accordion-3" />
                         <div className="collapse-title text-lg font-semibold transition-colors duration-200">
                             How do you verify users?
                         </div>
                         <div className="collapse-content">
-                            <div className="h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent mb-3"></div>
+                            <div className="h-px bg-gradient-to-r from-transparent via-accent to-transparent mb-3"></div>
                             <p className="opacity-80 leading-relaxed">
                                 We verify users through email confirmation,
                                 phone verification, and optional ID verification
@@ -94,13 +94,13 @@ const FAQ = () => {
                         </div>
                     </div>
 
-                    <div className="collapse collapse-plus shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-xl rounded-lg">
+                    <div className="collapse collapse-plus border border-slate-200  rounded-lg">
                         <input type="radio" name="my-accordion-3" />
                         <div className="collapse-title text-lg font-semibold transition-colors duration-200">
                             What safety measures do you have in place?
                         </div>
                         <div className="collapse-content">
-                            <div className="h-px bg-gradient-to-r from-transparent via-lime-400 to-transparent mb-3"></div>
+                            <div className="h-px bg-gradient-to-r from-transparent via-accent to-transparent mb-3"></div>
                             <p className="opacity-80 leading-relaxed">
                                 We prioritize your safety with user
                                 verification, secure messaging, reporting tools,

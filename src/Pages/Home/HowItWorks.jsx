@@ -4,20 +4,20 @@ import { Link } from "react-router";
 
 const HowItWorks = () => {
     return (
-        <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 mt-10 group shadow-md overflow-clip">
-            <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-secondary rounded-b-full md:w-3/4 lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500 overflow-hidden lg:mb-8">
-                Find, Connect, Move In
+        <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 space-y-5">
+            <h1 className="text-2xl lg:text-3xl pri-font font-bold drop-shadow-lg text-center sm:w-max pri-font mx-auto">
+                How It Works
             </h1>
 
-            <div className="mt-2 lg:mt-8 grid md:grid-cols-3 gap-3 md:gap-8">
-                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-2 lg:p-6 rounded-lg ">
-                    <div className="bg-accent/10 p-4 rounded-full mb-4 group-hover:bg-accent/20 transition-all duration-300">
-                        <FaSearch className="size-10 md:size-14 lg:size-16 text-accent transition-all duration-300 group-hover:text-accent-focus" />
+            <div className="mt-2 grid md:grid-cols-3 gap-0 md:gap-8">
+                <div className="text-black bg-[var(--color-banner1)] border-secondary/50 rounded-4xl shadow hover:shadow-lg hover:scale-[1.02] overflow-hidden h-full flex flex-col items-center transition-all group duration-300 scale-95 group hover:scale-105 p-5 lg:p-6">
+                    <div className="bg-secondary/10 p-4 rounded-full mb-4 group-hover:bg-white transition-all duration-300">
+                        <FaSearch className="size-10 md:size-14 group-hover:text-accent transition-all duration-300 group-hover:text-accent-focus" />
                     </div>
-                    <h1 className="pri-font text-xl lg:text-2xl font-bold transition-all duration-300 text-accent mb-3 text-center">
+                    <h1 className="pri-font text-base md:text-xl font-bold transition-all duration-300 mb-3 text-center">
                         Search & Filter
                     </h1>
-                    <p className="w-full transition-all duration-300 group-hover:text-base-content/80 sec-font text-sm text-center font-medium leading-relaxed">
+                    <p className="w-full transition-all duration-300  sec-font text-sm text-center font-medium leading-relaxed">
                         Browse through verified roommate profiles and available
                         rooms. Use our smart filters to find matches based on
                         location, budget, lifestyle preferences, and
@@ -25,14 +25,14 @@ const HowItWorks = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-2 lg:p-6 rounded-lg ">
-                    <div className="bg-accent/10 p-4 rounded-full mb-4 group-hover:bg-accent/20 transition-all duration-300">
-                        <FaUserFriends className="size-10 md:size-14 lg:size-16 text-accent transition-all duration-300 group-hover:text-accent-focus" />
+                <div className="text-black bg-[var(--color-banner1)] border-secondary/50 rounded-4xl shadow hover:shadow-lg hover:scale-[1.02] overflow-hidden h-full flex flex-col items-center transition-all group duration-300 scale-95 group hover:scale-105 p-5 lg:p-6">
+                    <div className="bg-secondary/10 p-4 rounded-full mb-4 group-hover:bg-white transition-all duration-300">
+                        <FaUserFriends className="size-10 md:size-14 group-hover:text-accent transition-all duration-300 group-hover:text-accent-focus" />
                     </div>
-                    <h1 className="pri-font text-xl lg:text-2xl font-bold transition-all duration-300 text-accent mb-3 text-center">
+                    <h1 className="pri-font text-base md:text-xl font-bold transition-all duration-300 mb-3 text-center">
                         Connect & Chat
                     </h1>
-                    <p className="w-full transition-all duration-300 group-hover:text-base-content/80 sec-font text-sm text-center font-medium leading-relaxed">
+                    <p className="w-full transition-all duration-300  sec-font text-sm text-center font-medium leading-relaxed">
                         Reach out to potential roommates through our secure
                         messaging system. Share interests, discuss living
                         arrangements, and get to know each other before making
@@ -40,14 +40,14 @@ const HowItWorks = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-col items-center transition-all duration-300 scale-95 group hover:scale-105 p-2 lg:p-6 rounded-lg ">
-                    <div className="bg-accent/10 p-4 rounded-full mb-4 group-hover:bg-accent/20 transition-all duration-300">
-                        <FaHome className="size-10 md:size-14 lg:size-16 text-accent transition-all duration-300 group-hover:text-accent-focus" />
+                <div className="text-black bg-[var(--color-banner1)] border-secondary/50 rounded-4xl shadow hover:shadow-lg hover:scale-[1.02] overflow-hidden h-full flex flex-col items-center transition-all group duration-300 scale-95 group hover:scale-105 p-5 lg:p-6">
+                    <div className="bg-secondary/10 p-4 rounded-full mb-4 group-hover:bg-white transition-all duration-300">
+                        <FaHome className="size-10 md:size-14 group-hover:text-accent transition-all duration-300 group-hover:text-primary-focus" />
                     </div>
-                    <h1 className="pri-font text-xl lg:text-2xl font-bold transition-all duration-300 text-accent mb-3 text-center">
+                    <h1 className="pri-font text-base md:text-xl font-bold transition-all duration-300 mb-3 text-center">
                         Move In Together
                     </h1>
-                    <p className="w-full sec-font text-sm text-center font-medium transition-all duration-300 group-hover:text-base-content/80 leading-relaxed">
+                    <p className="w-full sec-font text-sm text-center font-medium transition-all duration-300  leading-relaxed">
                         Found your perfect match? Schedule meetups, view
                         properties together, and start your new chapter as
                         roommates. Build lasting friendships while sharing your

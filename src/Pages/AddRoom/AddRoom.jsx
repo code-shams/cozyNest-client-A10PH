@@ -58,12 +58,12 @@ const AddRoom = () => {
             });
     };
     return (
-        <div className="max-w-[1515px] w-11/12 mx-auto my-10 sec-font">
+        <div className="max-w-[1515px] w-11/12 mx-auto my-5 sec-font">
             {loading ? (
                 <Loader></Loader>
             ) : (
-                <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0 shadow-lg group hover:shadow-xl transition-all duration-500  overflow-hidden">
-                    <h1 className="text-center text-lg sm:text-2xl md:text-3xl font-extrabold pri-font bg-black text-secondary rounded-b-full md:w-1/2 lg:w-1/3 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500  overflow-hidden">
+                <div className="rounded-lg ">
+                    <h1 className="text-2xl lg:text-3xl font-bold drop-shadow-lg  text-center sm:w-max pri-font mx-auto">
                         New Post
                     </h1>
 
@@ -178,7 +178,7 @@ const AddRoom = () => {
                             <div className="text-center ">
                                 <button
                                     type="submit"
-                                    className="btn btn-md w-full sm:w-auto px-12 md:text-lg mt-2 bg-accent text-white hover:scale-110 rounded-full transition-all duration-300"
+                                    className="btn btn-md w-full sm:w-auto px-12 md:text-lg mt-2 bg-accent text-black hover:scale-110 rounded-full transition-all duration-300"
                                 >
                                     Add
                                 </button>

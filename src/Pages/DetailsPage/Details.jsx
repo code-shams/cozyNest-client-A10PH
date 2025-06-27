@@ -73,9 +73,9 @@ const Details = () => {
             });
     };
     return (
-        <div className="max-w-[1515px] w-11/12 mx-auto mt-5 md:mt-10">
-            <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0  shadow-xl group">
-                <h1 className="text-center text-sm p-1 sm:p-0 sm:text-xl md:text-2xl font-extrabold pri-font bg-black text-secondary rounded-b-full w-full lg:w-3/5 mx-auto group-hover:scale-105 group-hover:p-2 transition-all duration-500  overflow-hidden">
+        <div className="max-w-[1515px] w-11/12 mx-auto my-5 md:my-10">
+            <div className="rounded-lg p-2 pt-0 md:p-5 md:pt-0">
+                <h1 className="text-2xl lg:text-3xl font-bold drop-shadow-lg  text-center sm:w-max pri-font mx-auto">
                     {title}
                 </h1>
                 <div className="mt-3 md:mt-6">

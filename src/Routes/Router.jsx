@@ -13,8 +13,13 @@ import UpdateRoom from "../Pages/UpdateRoom/UpdateRoom";
 import Loader from "../Components/Loader/Loader";
 import About from "../Pages/About/About";
 import FAQ from "../Pages/FAQ/FAQ";
+import Terms from "../Pages/Terms";
+import PrivacyPolicy from "../Pages/PrivacyPolicy";
+import DashboardLayout from "../Layouts/Dashboard/DashboardLayout";
+import DashboardHome from "../Pages/Dashboard/DashboardHome";
 
 const serverURL = import.meta.env.VITE_SERVER_URL;
+
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -28,10 +33,62 @@ export const router = createBrowserRouter([
                 Component: Homepage,
             },
             {
+                path: "browse-rooms",
+                hydrateFallbackElement: <Loader></Loader>,
+                loader: () => fetch(`${serverURL}/post`),
+                element: <BrowseRoom></BrowseRoom>,
+            },
+            {
+                path: "post-details/:id",
+                hydrateFallbackElement: <Loader></Loader>,
+                loader: ({ params }) =>
+                    fetch(`${serverURL}/post?_id=${params.id}`),
+                element: <Details></Details>,
+            },
+            {
+                path: "about",
+                Component: About,
+            },
+            {
+                path: "faq",
+                Component: FAQ,
+            },
+            {
+                path: "terms",
+                Component: Terms,
+            },
+            {
+                path: "privacy",
+                Component: PrivacyPolicy,
+            },
+            {
+                path: "/auth/sign-up",
+                Component: SignUp,
+            },
+            {
+                path: "/auth/sign-in",
+                Component: SignIn,
+            },
+        ],
+    },
+    {
+        path: "/dashboard",
+        element: (
+            <PrivateRoute>
+                <DashboardLayout />
+            </PrivateRoute>
+        ),
+        errorElement: <Errorpage></Errorpage>,
+        children: [
+            {
+                index: true,
+                element: <DashboardHome></DashboardHome>,
+            },
+            {
                 path: "add-room",
                 element: (
                     <PrivateRoute>
-                        <AddRoom></AddRoom>
+                        <AddRoom></AddRoom>,
                     </PrivateRoute>
                 ),
             },
@@ -45,47 +102,16 @@ export const router = createBrowserRouter([
                 path: "my-rooms",
                 element: (
                     <PrivateRoute>
-                        <MyRooms></MyRooms>
+                        <MyRooms></MyRooms>,
                     </PrivateRoute>
                 ),
             },
             {
-                path: "about",
-                Component: About,
-            },
-            {
-                path: "faq",
-                Component: FAQ,
-            },
-            {
-                path: "post-details/:id",
-                hydrateFallbackElement: <Loader></Loader>,
-                loader: ({ params }) =>
-                    fetch(`${serverURL}/post?_id=${params.id}`),
-                element: (
-                    <PrivateRoute>
-                        <Details></Details>
-                    </PrivateRoute>
-                ),
-            },
-            {
-                path: "/post-update/:id",
+                path: "post-update/:id",
                 hydrateFallbackElement: <Loader></Loader>,
                 loader: ({ params }) =>
                     fetch(`${serverURL}/post/?_id=${params.id}`),
-                element: (
-                    <PrivateRoute>
-                        <UpdateRoom></UpdateRoom>
-                    </PrivateRoute>
-                ),
-            },
-            {
-                path: "/auth/sign-up",
-                Component: SignUp,
-            },
-            {
-                path: "/auth/sign-in",
-                Component: SignIn,
+                element: <UpdateRoom></UpdateRoom>,
             },
         ],
     },
